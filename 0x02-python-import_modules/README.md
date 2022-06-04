@@ -17,3 +17,4 @@ This directory contains some files on 0x02. Python - import & modules project
 * 5-variable_load.py
 * 100-my_calculator.py
 * 101-easy_print.py
+* 102-magic_calculation.py
