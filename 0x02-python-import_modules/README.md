@@ -10,3 +10,4 @@ This directory contains some files on 0x02. Python - import & modules project
 * calculator_1.py
 * 1-calculation.py
 * 2-args.py
+* 3-infinite_add.py
