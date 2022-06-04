@@ -13,3 +13,5 @@ This directory contains some files on 0x02. Python - import & modules project
 * 3-infinite_add.py
 * 4-hidden_discovery.py
 * hidden_4.pyc
+* variable_load_5.py
+* 5-variable_load.py
