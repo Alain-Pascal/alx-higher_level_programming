@@ -20,3 +20,5 @@ This directory contains some files about 0x03. Python - Data Structures: Lists, 
 * 6-main.py
 * 7-add_tuple.py
 * 7-main.py
+* 8-multiple_returns.py
+* 8-main.py
