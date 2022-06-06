@@ -24,3 +24,5 @@ This directory contains some files about 0x03. Python - Data Structures: Lists, 
 * 8-main.py
 * 9-max_integer.py
 * 9-main.py
+* 10-divisible_by_2.py
+* 10-main.py
