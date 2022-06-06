@@ -8,3 +8,5 @@ This directory contains some files about 0x03. Python - Data Structures: Lists, 
 * 0-main.py
 * 1-element_at.py
 * 1-main.py
+* 2-replace_in_list.py
+* 2-main.py
