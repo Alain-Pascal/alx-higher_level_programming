@@ -10,3 +10,5 @@ This directory contains some files about 0x03. Python - Data Structures: Lists, 
 * 1-main.py
 * 2-replace_in_list.py
 * 2-main.py
+* 3-print_reversed_list_integer.py
+* 3-main.py
