@@ -16,3 +16,5 @@ This directory contains some files about 0x03. Python - Data Structures: Lists, 
 * 4-main.py
 * 5-no_c.py
 * 5-main.py
+* 6-print_matrix_integer.py
+* 6-main.py
