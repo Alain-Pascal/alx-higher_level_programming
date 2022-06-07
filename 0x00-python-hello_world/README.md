@@ -59,9 +59,9 @@ This directory contains some files on 0x00. Python - Hello, World project
 
     > This is a complete Python script file from this [source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py)
     > 
+    > Loops and conditional statements are not used
+    >
     > `word_first_3` contains the first 3 letters of the variable `word`
-    >
     > `word_last_2` contains the last 2 letters of the variable `word`
-    >
     > `middle_word` contains the value of the variable `word` without the first and last letters
-    
+
