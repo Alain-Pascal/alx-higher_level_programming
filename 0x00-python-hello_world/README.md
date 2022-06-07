@@ -50,8 +50,18 @@ This directory contains some files on 0x00. Python - Hello, World project
 
 * 6-concat.py
 
-> A complete Python script from this [source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py) that prints `Welcome to Holberton School!`
->
-> Loops and conditional statements are not used
-> `str1` and `str2` are used in the new line of code
+    > A complete Python script from this [source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py) that prints `Welcome to Holberton School!`
+    >
+    > Loops and conditional statements are not used
+    > `str1` and `str2` are used in the new line of code
 
+* 7-edges.py
+
+    > This is a complete Python script file from this [source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py)
+    > 
+    > `word_first_3` contains the first 3 letters of the variable `word`
+    >
+    > `word_last_2` contains the last 2 letters of the variable `word`
+    >
+    > `middle_word` contains the value of the variable `word` without the first and last letters
+    
