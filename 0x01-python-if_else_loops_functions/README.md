@@ -11,3 +11,5 @@ This directory contains some files on 0x01. Python - if/else, loops, functions p
 * 4-print_hexa.py
 * 5-print_comb2.py
 * 6-print_comb3.py
+* 7-islower.py
+* 7-main.py
