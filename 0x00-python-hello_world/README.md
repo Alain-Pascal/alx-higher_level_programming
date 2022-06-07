@@ -75,3 +75,7 @@ This directory contains some files on 0x00. Python - Hello, World project
     >
     > String literals are not used
 
+* 9-easter_egg.py
+
+    > This is a Python script file that prints "The Zen of Python", by TimPeters, followed by a new line
+
