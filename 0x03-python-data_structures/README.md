@@ -33,3 +33,5 @@ This directory contains some files about 0x03. Python - Data Structures: Lists, 
 * linked_lists.c
 * 13-is_palindrome.c
 * 13-main.c
+* 100-print_python_list_info.c
+* 100-test_lists.py
