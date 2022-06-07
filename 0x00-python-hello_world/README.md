@@ -42,3 +42,9 @@ This directory contains some files on 0x00. Python - Hello, World project
     >
     > A new and improved way to format strings in Python, [f-strings](https://realpython.com/python-f-strings/), is used
 
+* 5-print_string.py
+
+    > This is a complete Python file from this [source code](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py) that prints 3 times a string stored in the variable `str`, followed by its first 9 characters
+    >
+    > Loops and conditional statements are not used
+
