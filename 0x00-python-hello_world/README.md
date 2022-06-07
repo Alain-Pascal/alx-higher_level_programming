@@ -116,4 +116,10 @@ This directory contains some files on 0x00. Python - Hello, World project
     > The Python file name will be stored in the environment variable `$PYFILE`
     >
     > The output filename is `$PYFILEc` (ex: `export PYFILE=my_main.py` => output filename: `my_main.pyc`)
+
+* 102-magic_calculation.py
+
+    > This is a Python function of which bytecode can be disassembled
+    >
+    > More on Python bytecode [here](https://docs.python.org/3/library/dis.html)
     
