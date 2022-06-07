@@ -23,3 +23,7 @@ This directory contains some files on 0x01. Python - if/else, loops, functions p
 * 11-main.py
 * 12-fizzbuzz.py
 * 12-main.py
+* lists.h
+* linked_lists.c
+* 13-insert_number.c
+* 13-main.c
