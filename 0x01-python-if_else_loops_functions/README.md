@@ -28,3 +28,5 @@ This directory contains some files on 0x01. Python - if/else, loops, functions p
 * 13-insert_number.c
 * 13-main.c
 * 100-print_tebahpla.py
+* 101-remove_char_at.py
+* 101-main.py
