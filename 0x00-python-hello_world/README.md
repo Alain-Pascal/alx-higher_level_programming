@@ -48,3 +48,10 @@ This directory contains some files on 0x00. Python - Hello, World project
     >
     > Loops and conditional statements are not used
 
+* 6-concat.py
+
+> A complete Python script from this [source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py) that prints `Welcome to Holberton School!`
+>
+> Loops and conditional statements are not used
+> `str1` and `str2` are used in the new line of code
+
