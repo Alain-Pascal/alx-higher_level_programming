@@ -65,3 +65,13 @@ This directory contains some files on 0x00. Python - Hello, World project
     > `word_last_2` contains the last 2 letters of the variable `word`
     > `middle_word` contains the value of the variable `word` without the first and last letters
 
+* 8-concat_edges.py
+
+    > A complete Python script file from this [source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py) that prints `object-oriented programming with Python`, followed by a new line
+    >
+    > Loops and conditional statements are not used
+    >
+    > No new variables are created
+    >
+    > String literals are not used
+
