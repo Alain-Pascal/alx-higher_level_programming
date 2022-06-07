@@ -10,3 +10,4 @@ This directory contains some files on 0x01. Python - if/else, loops, functions p
 * 3-print_alphabt.py
 * 4-print_hexa.py
 * 5-print_comb2.py
+* 6-print_comb3.py
