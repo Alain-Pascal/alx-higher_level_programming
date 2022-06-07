@@ -34,3 +34,11 @@ This directory contains some files on 0x00. Python - Hello, World project
     >
     > A new and improved way to format strings in Python, [f-strings](https://realpython.com/python-f-strings/), is used
 
+* 4-print_float.py
+
+    > A complete Python script file from this [source code](https://github.com/holbertonschool/0x00.py/blob/master/4-print_float.py) that prints the float stored in the variable `number` with a precision or float of 2 digits
+    >
+    > The variable `number` is not casted into a string
+    >
+    > A new and improved way to format strings in Python, [f-strings](https://realpython.com/python-f-strings/), is used
+
