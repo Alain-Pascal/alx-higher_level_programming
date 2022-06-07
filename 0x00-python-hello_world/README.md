@@ -79,3 +79,21 @@ This directory contains some files on 0x00. Python - Hello, World project
 
     > This is a Python script file that prints "The Zen of Python", by TimPeters, followed by a new line
 
+* lists.h
+
+    > A header file containing prototypes of functions
+
+* 10-linked_lists.c
+
+    > A C file containing functions on linked lists
+
+* 10-check_cycle.c
+
+    > A function that checks if a singly linked lis has a cycle in it
+    >
+    > Returns `0` if there is no cycle, `1` if there is a cycle
+
+* 10-main.c
+
+    > Main file to run program on linked list cycle
+
