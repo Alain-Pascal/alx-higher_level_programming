@@ -19,4 +19,10 @@ This directory contains some files on 0x00. Python - Hello, World project
     > This is a Shell script that runs Python code
     >
     > The Python code will be saved in the environment variable `$PYCODE`
-    
+
+* 2-print.py
+
+    > A Python script that prints exactly `"Programming is like building a multilingual puzzle`, followed by a new line
+    >
+    > Uses the function `print`
+
