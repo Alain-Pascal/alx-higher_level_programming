@@ -19,3 +19,5 @@ This directory contains some files on 0x01. Python - if/else, loops, functions p
 * 9-main.py
 * 10-add.py
 * 10-main.py
+* 11-pow.py
+* 11-main.py
