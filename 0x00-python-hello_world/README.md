@@ -97,3 +97,15 @@ This directory contains some files on 0x00. Python - Hello, World project
 
     > Main file to run program on linked list cycle
 
+* 100-write.py
+
+    > This is a Python script that prints exactly `and that piece of art is useful - Dora Korpar, 2015-10-19`, followed by a new line
+    >
+    > The function `write` from the `sys` module is used
+    >
+    > `print` is not used
+    >
+    > The script prints to `stderr`
+    >
+    > The script exits with the status code `1`
+    
