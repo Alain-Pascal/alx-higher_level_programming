@@ -108,4 +108,12 @@ This directory contains some files on 0x00. Python - Hello, World project
     > The script prints to `stderr`
     >
     > The script exits with the status code `1`
+
+* 101-compile
+
+    > A Shell script that compiles a Python script file
+    >
+    > The Python file name will be stored in the environment variable `$PYFILE`
+    >
+    > The output filename is `$PYFILEc` (ex: `export PYFILE=my_main.py` => output filename: `my_main.pyc`)
     
