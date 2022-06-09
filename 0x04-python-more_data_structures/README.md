@@ -4,6 +4,7 @@ This directory contains some files about 0x04. Python - More Data Structures: Se
 
 ## files
 
+* 0-square_matrix_simple.py
 * 6-print_sorted_dictionary.py
 * 100-weight_average.py
 * 101-square_matrix_map.py
