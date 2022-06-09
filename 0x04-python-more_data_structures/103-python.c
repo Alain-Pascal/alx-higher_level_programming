@@ -1,5 +1,5 @@
 #include <Python.h>
-#include <object.>
+#include <object.h>
 #include <listobject.h>
 #include <bytesobject.h>
 
@@ -24,7 +24,7 @@ void print_python_bytes(PyObject *p)
 		return;
 	}
 
-	PyBytes_ASStringAndSize(p, &trying_str, &size);
+	PyBytes_AsStringAndSize(p, &trying_str, &size);
 
 	printf("  size: %li\n", size);
 	printf("  trying string: %s\n", trying_str);
@@ -33,7 +33,7 @@ void print_python_bytes(PyObject *p)
 	else
 		printf("  first 10 bytes:");
 	for (i = 0; i <= size && i < 10; i++)
-		print(" %02hhx", trying_str[i]);
+		printf(" %02hhx", trying_str[i]);
 	printf("\n");
 }
 
