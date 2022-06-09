@@ -1,4 +1,4 @@
-#!/usr/python3
+#!/usr/bin/python3
 def complex_delete(a_dictionary, value):
     for k in list(a_dictionary):
         if a_dictionary[k] == value:
