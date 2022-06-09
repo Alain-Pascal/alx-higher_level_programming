@@ -15,6 +15,7 @@ This directory contains some files about 0x04. Python - More Data Structures: Se
 * 8-simple_delete.py
 * 9-multiply_by_2.py
 * 10-best_score.py
+* 11-multiply_list_map.py
 * 100-weight_average.py
 * 101-square_matrix_map.py
 * 102-complex_delete.py
