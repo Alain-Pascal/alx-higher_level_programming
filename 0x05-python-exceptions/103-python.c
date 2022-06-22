@@ -49,7 +49,7 @@ void print_python_bytes(PyObject *p)
 		printf(" %02hhx", string[i]);
 		i++;
 	}
-	prinf("\n");
+	printf("\n");
 }
 
 /**
