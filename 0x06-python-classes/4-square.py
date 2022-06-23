@@ -36,7 +36,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Seeter method that sets size of square to a value
+        """Setter method that sets size of square to a value
 
         Args:
             value (int): value to set as size
