@@ -15,6 +15,21 @@ Using ``matrix_mul``
 ...     print(e)
 m_a and m_b can't be multiplied
 >>> try:
+...     matrix_mul(1, [[1, 2], [3, 4]])
+... except TypeError as e:
+...     print(e)
+m_a must be a list
+>>> try:
+...     matrix_mul([[1, 2], [3, 4]], 1)
+... except TypeError as e:
+...     print(e)
+m_b must be a list
+>>> try:
+...     matrix_mul([[1, 2], 3], [[1, 2], [3, 4]])
+... except TypeError as e:
+...     print(e)
+m_a must be a list of lists
+>>> try:
 ...     matrix_mul([[1, 2]], [1, 2])
 ... except TypeError as e:
 ...     print(e)
