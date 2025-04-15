@@ -23,7 +23,13 @@ def add_integer(a, b=98):
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
 
-    return int(a) + int(b)
+    # Convert a and b to integers
+    # if they are floats
+    if isinstance(a, float):
+        a = int(a)
+    if isinstance(b, float):
+        b = int(b)
+    return a + b
 
 if __name__ == "__main__":
     # This block is executed when the script is run directly.
