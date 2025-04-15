@@ -2,7 +2,7 @@
 """
 This  module defines a function that adds two integers.
 
-It ensures the inputs are int/floats and 
+It ensures the inputs are int/floats and
 raises a TypeError if they are not.
 If the inputs are floats, they are cast to integers before addition.
 The function then returns the integer sum of the two numbers.
