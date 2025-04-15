@@ -2,8 +2,12 @@
 """
 This  module defines a function that adds two integers.
 
-The function ensures that the inputs are integers or floats and raises a TypeError if they are not. If the inputs are floats, they are cast to integers before addition. The function then returns the integer sum of the two numbers.
+It ensures that the inputs are int or floats and raises a TypeError if they are not.
+If the inputs are floats, they are cast to integers before addition.
+The function then returns the integer sum of the two numbers.
 """
+
+
 def add_integer(a, b=98):
     """
     Adds two integers or floats and returns the result as an integer.
@@ -31,6 +35,7 @@ def add_integer(a, b=98):
         b = int(b)
     return a + b
 
+
 if __name__ == "__main__":
     # This block is executed when the script is run directly.
     # It demonstrates the usage of the add_integer function.
@@ -43,7 +48,7 @@ if __name__ == "__main__":
         print(add_integer(4, "School"))
     except Exception as e:
         print(e)
-    
+
     try:
         print(add_integer(None))
     except Exception as e:
