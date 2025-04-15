@@ -40,10 +40,20 @@ m_b must be a list of lists
 ...     print(e)
 m_a should contain only integers or floats
 >>> try:
+...     matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 'a']])
+... except TypeError as e:
+...     print(e)
+m_b should contain only integers or floats
+>>> try:
 ...     matrix_mul([[1, 2], [3]], [[1, 2], [3, 4]])
 ... except TypeError as e:
 ...     print(e)
 each row of m_a must be of the same size
+>>> try:
+...    matrix_mul([[1, 2], [3, 4]], [[1, 2], [3]])
+... except TypeError as e:
+...    print(e)
+each row of m_b must be of the same size
 >>> try:
 ...     matrix_mul([[]], [[1, 2]])
 ... except ValueError as e:
@@ -54,3 +64,13 @@ m_a can't be empty
 ... except ValueError as e:
 ...     print(e)
 m_b can't be empty
+>>> try:
+...     matrix_mul([[1, 2], [3, 4]])
+... except TypeError as e:
+...     print(e)
+matrix_mul() missing 1 required positional argument: 'm_b'
+>>> try:
+...     matrix_mul()
+... except TypeError as e:
+...     print(e)
+matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
