@@ -139,3 +139,14 @@ matrix must be a matrix (list of lists) of integers/floats
 ... except TypeError as e:
 ...     print(e)
 div must be a number
+
+"Test float overflow"
+>>> matrix_divided([[float('inf'), 2, 3], [4, 5, 6]], 2)
+[[inf, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+"Test NaN values in the matrix"
+>>> try:
+...     matrix_divided([[float('nan'), 2, 3], [4, 5, 6]], 2)
+... except TypeError as e:
+...     print(e)
+[[nan, 1.0, 1.5], [2.0, 2.5, 3.0]]
