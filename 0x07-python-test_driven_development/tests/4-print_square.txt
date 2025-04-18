@@ -17,6 +17,13 @@ This module contains doctests for the print_square function.
 ##
 ##
 
+# Test with missing argument
+>>> try:
+...     print_square()
+... except TypeError as e:
+...     print(e)
+print_square() missing 1 required positional argument: 'size'
+
 # Test with negative size
 >>> try:
 ...     print_square(-1)
