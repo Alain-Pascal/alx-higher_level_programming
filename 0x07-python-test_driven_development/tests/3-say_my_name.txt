@@ -1,0 +1,96 @@
+"""
+This module contains doctests for the say_my_name function.
+"""
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# Valid first and last names
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+# Valid first name only
+>>> say_my_name("Bob")
+My name is Bob 
+
+# Valid first name and empty last name
+>>> say_my_name("John", "")
+My name is John 
+
+# Empty first name and valid last name
+>>> say_my_name("", "Smith")
+My name is  Smith
+
+# Empty first and last names
+>>> say_my_name("", "")
+My name is  
+
+# Invalid first name
+>>> try:
+...     say_my_name(12, "White")
+... except TypeError as e:
+...     print(e)
+first_name must be a string
+
+# Invalid last name
+>>> try:
+...     say_my_name("Jack", 21)
+... except TypeError as e:
+...     print(e)
+last_name must be a string
+
+# First name is None
+>>> try:
+...     say_my_name(None, "Mary")
+... except TypeError as e:
+...     print(e)
+first_name must be a string
+
+# Last name is None
+>>> try:
+...     say_my_name("Nore", None)
+... except TypeError as e:
+...     print(e)
+last_name must be a string
+
+# Too many arguments
+>>> try:
+...     say_my_name("Nore", "Jiko", "Joe")
+... except TypeError as e:
+...     print(e)
+say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+#First name with spaces
+>>> say_my_name("John David", "Smith")
+My name is John David Smith
+
+#Last name with spaces
+>>> say_my_name("John", "Smith Jr")
+My name is John Smith Jr
+
+#Both names with spaces
+>>> say_my_name("John David", "Smith Jr")
+My name is John David Smith Jr
+
+#First name with special characters
+>>> say_my_name("John-David", "Smith")
+My name is John-David Smith
+
+# Last name with special characters
+>>> say_my_name("John", "Smith-Jr")
+My name is John Smith-Jr
+
+# Both names with special characters
+>>> say_my_name("John-David", "Smith-Jr")
+My name is John-David Smith-Jr
+
+# Empty first name with spaces
+>>> say_my_name("  ", "Smith")
+My name is    Smith
+
+# Empty last name with spaces
+>>> say_my_name("John", "  ")
+My name is John   
+
+# Only spaces as first name and last name
+>>> say_my_name("  ", "  ")
+My name is      
