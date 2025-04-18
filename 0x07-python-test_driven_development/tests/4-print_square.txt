@@ -1,0 +1,60 @@
+"""
+This module contains doctests for the print_square function.
+"""
+
+>>> print_square = __import__('4-print_square').print_square
+
+# Test with size 0
+>>> print_square(0)
+
+
+# Test with size 1
+>>> print_square(1)
+#
+
+# Test with size 2
+>>> print_square(2)
+##
+##
+
+# Test with negative size
+>>> try:
+...     print_square(-1)
+... except ValueError as e:
+...     print(e)
+size must be >= 0
+
+# Test with float size
+>>> try:
+...     print_square(2.1)
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+# Test with string size
+>>> try:
+...     print_square("Mary")
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+# Test with list size
+>>> try:
+...     print_square([1, 2])
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+# Test with None size
+>>> try:
+...     print_square(None)
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+# Test with NaN size
+>>> try:
+...     print_square(float('nan'))
+... except TypeError as e:
+...     print(e)
+size must be an integer
