@@ -1,5 +1,5 @@
 """
-This module contains doctests for the print_square function.
+This module contains doctests for the text_indentation function.
 """
 
 >>> print_square = __import__('4-print_square').print_square

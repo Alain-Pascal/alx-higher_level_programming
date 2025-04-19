@@ -10,7 +10,7 @@ def print_square(size):
     Prints a square with the char #
 
     Args:
-        size (int): lengrg of the square
+        size (int): length of the square
 
     Raises:
         TypeError: If size is not an int

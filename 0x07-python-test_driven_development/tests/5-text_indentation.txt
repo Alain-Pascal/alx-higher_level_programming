@@ -1,0 +1,146 @@
+"""
+This module contains doctests for the text_indentation function.
+"""
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Basic test with '.', '?', and ':'
+>>> text_indentation("Hello. World? How are you: doing?")
+Hello.
+<BLANKLINE>
+World?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+doing?
+<BLANKLINE>
+
+# Test with multiple spaces after delimiters
+>>> text_indentation("Hello.  World?   How are you:    doing?")
+Hello.
+<BLANKLINE>
+World?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+doing?
+<BLANKLINE>
+
+# Test with leading and trailing spaces in the input
+>>> text_indentation("   Hello. World? How are you: doing?   ")
+Hello.
+<BLANKLINE>
+World?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+doing?
+<BLANKLINE>
+
+# Test with only delimiters
+>>> text_indentation(".:?")
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+?
+<BLANKLINE>
+
+# Test with no delimiters
+>>> text_indentation("Hello World How are you doing")
+Hello World How are you doing
+
+# Test with consecutive delimiters
+>>> text_indentation("Hello..World??How::doing")
+Hello.
+<BLANKLINE>
+.
+<BLANKLINE>
+World?
+<BLANKLINE>
+?
+<BLANKLINE>
+How:
+<BLANKLINE>
+:
+<BLANKLINE>
+doing
+
+# Test with newlines in the input
+>>> text_indentation("Hello.\\nWorld?How are you:\\ndoing?")
+Hello.
+<BLANKLINE>
+\nWorld?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+\ndoing?
+<BLANKLINE>
+
+# Test with mixed delimiters and spaces
+>>> text_indentation(" Hello.  World? How  are:  you doing? ")
+Hello.
+<BLANKLINE>
+World?
+<BLANKLINE>
+How  are:
+<BLANKLINE>
+you doing?
+<BLANKLINE>
+
+# Test Empty string
+>>> text_indentation("")
+
+# Test with only spaces
+>>> text_indentation("   ")
+
+# Test with only newlines
+>>> text_indentation("\\n\\n\\n")
+\n\n\n
+
+# Test with a lot of consecutive delimiters
+>>> text_indentation(".....????::::")
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+
+# Text with delimiters at the beginning and end
+>>> text_indentation(".Hello? World:.")
+.
+<BLANKLINE>
+Hello?
+<BLANKLINE>
+World:
+<BLANKLINE>
+.
+<BLANKLINE>
+
+# Test with missing argument
+>>> try:
+...     text_indentation(12)
+... except TypeError as e:
+...     print(e)
+text must be a string
