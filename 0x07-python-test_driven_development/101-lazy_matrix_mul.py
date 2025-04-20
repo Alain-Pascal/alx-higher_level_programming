@@ -62,15 +62,29 @@ def lazy_matrix_mul(m_a, m_b):
         np_a = np.array(m_a)
         np_b = np.array(m_b)
 
+    except ValueError:
+        if any(len(row) != len(m_a[0]) for row in m_a[1:]):
+            raise TypeError(
+                "setting an array element with a sequence."
+                ) from None
+        if any(len(row) != len(m_b[0]) for row in m_b[1:]):
+            raise TypeError(
+                "setting an array element with a sequence."
+                ) from None
+        raise # Re-raise if it's note the "sequence" error
+
+    try:
         # Perform matrix multiplication
         # using NumPy's matmul function
         result = np.matmul(np_a, np_b)
 
         return result
     except ValueError as e:
-        raise ValueError(f"shapes {np_a.shape}\
-                and {np_b.shape} not aligned:\
-                    {np_a.shape[1]} (dim 1) != {np_b.shape[0]}\
-                        (dim 0)") from None
+        err = "shapes {} and {} not aligned: {} (dim 1) != {} (dim 0)"
+        raise ValueError(
+            err.format(
+                np_a.shape, np_b.shape, np_a.shape[1], np_b.shape[0]
+                )
+            ) from None
     except TypeError as e:
         raise TypeError("invalid data type for einsum") from None
