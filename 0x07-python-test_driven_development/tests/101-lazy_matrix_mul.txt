@@ -39,21 +39,21 @@ array([[ 9, 12, 15],
 ...     lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4], [5, 6]])
 ... except ValueError as e:
 ...     print(e)
-m_a and m_b can't be multiplied
+shapes (np_a.shape) and (np_b.shape) not aligned: (np_a.shape[1]) (dim 1) != (np_b.shape[0]) (dim 0)
 
 # m_a is not a list
 >>> try:
 ...     lazy_matrix_mul(1, [[1, 2], [3, 4]])
 ... except TypeError as e:
 ...     print(e)
-m_a must be a list
+Scalar operands are not allowed, use '*' instead
 
 # m_b is not a list
 >>> try:
 ...     lazy_matrix_mul([[1, 2], [3, 4]], 1)
 ... except TypeError as e:
 ...     print(e)
-m_b must be a list
+Scalar operands are not allowed, use '*' instead
 
 # m_a is not a list of lists
 >>> try:
@@ -74,19 +74,22 @@ m_b must be a list of lists
 ...     lazy_matrix_mul([[1, 'a']], [[1, 2]])
 ... except TypeError as e:
 ...     print(e)
-m_a should contain only integers or floats
+invalid data type for einsum
 
 # m_b contains non-number elements
 >>> try:
 ...     lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 'a']])
 ... except TypeError as e:
 ...     print(e)
-m_b should contain only integers or floats
+invalid data type for einsum
+
+
 >>> try:
 ...     lazy_matrix_mul([[1, 2], [3]], [[1, 2], [3, 4]])
 ... except TypeError as e:
 ...     print(e)
 each row of m_a must be of the same size
+
 >>> try:
 ...    lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3]])
 ... except TypeError as e:
@@ -103,6 +106,13 @@ m_a can't be empty
 # m_a is an empty list of lists
 >>> try:
 ...     lazy_matrix_mul([[]], [[1, 2]])
+... except ValueError as e:
+...     print(e)
+m_a can't be empty
+
+# m_a is an empty list of lists
+>>> try:
+...     lazy_matrix_mul([[]], [[1, 2], [3, 4]])
 ... except ValueError as e:
 ...     print(e)
 m_a can't be empty

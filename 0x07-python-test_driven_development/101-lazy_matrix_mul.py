@@ -6,6 +6,7 @@ using NumPy.
 
 import numpy as np
 
+
 def lazy_matrix_mul(m_a, m_b):
     """
     Multiplies two matrices using Numpy.
@@ -26,9 +27,9 @@ def lazy_matrix_mul(m_a, m_b):
     """
     # Input validation using NumPy, which will raise exceptions
     if not isinstance(m_a, list):
-        raise TypeError("m_a must be a list")
+        raise TypeError("Scalar operands are not allowed, use '*' instead")
     if not isinstance(m_b, list):
-        raise TypeError("m_b must be a list")
+        raise TypeError("Scalar operands are not allowed, use '*' instead")
 
     if not all(isinstance(row, list) for row in m_a):
         raise TypeError("m_a must be a list of lists")
@@ -42,30 +43,31 @@ def lazy_matrix_mul(m_a, m_b):
 
     for row in m_a:
         if not all(isinstance(ele, (int, float)) for ele in row):
-            raise TypeError("m_a should contain only integers or floats")
+            raise TypeError("invalid data type for einsum")
     for row in m_b:
         if not all(isinstance(ele, (int, float)) for ele in row):
-            raise TypeError("m_b should contain only integers or floats")
+            raise TypeError("invalid data type for einsum")
 
-    len_row_a = len(m_a[0])
-
-    if not all(len(row) == len_row_a for row in m_a):
+    # Check for consistent row sizes before converting to NumPy arrays
+    len_row_a = [len(row) for row in m_a]
+    if not all(size == len_row_a[0] for size in len_row_a):
         raise TypeError("each row of m_a must be of the same size")
 
-    len_row_b = len(m_b[0])
-
-    if not all(len(row) == len_row_b for row in m_b):
+    len_row_b = [len(row) for row in m_b]
+    if not all(size == len_row_b[0] for size in len_row_b):
         raise TypeError("each row of m_b must be of the same size")
 
-    if len_row_a != len(m_b):
-        raise ValueError("m_a and m_b can't be multiplied")
+    try:
+        # Convert to NumPy arrays
+        np_a = np.array(m_a)
+        np_b = np.array(m_b)
 
-    # Convert to NumPy arrays
-    np_a = np.array(m_a)
-    np_b = np.array(m_b)
+        # Perform matrix multiplication
+        # using NumPy's matmul function
+        result = np.matmul(np_a, np_b)
 
-    # Perform matrix multiplication
-    # using NumPy's matmul function
-    result = np.matmul(np_a, np_b)
-
-    return result
+        return result
+    except ValueError as e:
+        raise ValueError(f"shapes (np_a.shape) and (np_b.shape) not aligned: (np_a.shape[1]) (dim 1) != (np_b.shape[0]) (dim 0)") from None
+    except TypeError as e:
+        raise TypeError("invalid data type for einsum") from None
