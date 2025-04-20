@@ -68,6 +68,6 @@ def lazy_matrix_mul(m_a, m_b):
 
         return result
     except ValueError as e:
-        raise ValueError(f"shapes (np_a.shape) and (np_b.shape) not aligned: (np_a.shape[1]) (dim 1) != (np_b.shape[0]) (dim 0)") from None
+        raise ValueError(f"shapes {np_a.shape} and {np_b.shape} not aligned: {np_a.shape[1]} (dim 1) != {np_b.shape[0]} (dim 0)") from None
     except TypeError as e:
         raise TypeError("invalid data type for einsum") from None
