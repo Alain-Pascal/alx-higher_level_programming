@@ -93,32 +93,12 @@ setting an array element with a sequence.
 # Empty matrix m_a
 
 # m_a is an empty list of lists
->>> try:
-...     lazy_matrix_mul([[]], [[1, 2]])
-... except ValueError as e:
-...     print(e)
-matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 0)
 
 # m_a is an empty list of lists
->>> try:
-...     lazy_matrix_mul([[]], [[1, 2], [3, 4]])
-... except ValueError as e:
-...     print(e)
-matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 2 is different from 0)
 
 # Empty matrix m_b
->>> try:
-...     lazy_matrix_mul([[1, 2]], [])
-... except ValueError as e:
-...     print(e)
-matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 0 is different from 2)
 
 # m_b is an empty list of lists
->>> try:
-...     lazy_matrix_mul([[1, 2]], [[]])
-... except ValueError as e:
-...     print(e)
-matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 2)
 
 # Missing argument m_b
 >>> try:
