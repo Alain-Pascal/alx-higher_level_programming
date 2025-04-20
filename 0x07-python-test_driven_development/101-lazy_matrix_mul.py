@@ -36,10 +36,10 @@ def lazy_matrix_mul(m_a, m_b):
     if not all(isinstance(row, list) for row in m_b):
         raise TypeError("m_b must be a list of lists")
 
-    if not m_a or not m_a[0]:
-        raise ValueError("m_a can't be empty")
-    if not m_b or not m_b[0]:
-        raise ValueError("m_b can't be empty")
+    # if not m_a or not m_a[0]:
+    #     raise ValueError("m_a can't be empty")
+    # if not m_b or not m_b[0]:
+    #     raise ValueError("m_b can't be empty")
 
     for row in m_a:
         if not all(isinstance(ele, (int, float)) for ele in row):
