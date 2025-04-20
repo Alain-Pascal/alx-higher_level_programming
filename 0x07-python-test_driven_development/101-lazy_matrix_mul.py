@@ -51,16 +51,22 @@ def lazy_matrix_mul(m_a, m_b):
     # Check for consistent row sizes before converting to NumPy arrays
     len_row_a = [len(row) for row in m_a]
     if not all(size == len_row_a[0] for size in len_row_a):
-        raise TypeError("each row of m_a must be of the same size")
+        raise TypeError("setting an array element with a sequence.")
 
     len_row_b = [len(row) for row in m_b]
     if not all(size == len_row_b[0] for size in len_row_b):
-        raise TypeError("each row of m_b must be of the same size")
+        raise TypeError("setting an array element with a sequence.")
 
     try:
         # Convert to NumPy arrays
         np_a = np.array(m_a)
         np_b = np.array(m_b)
+
+        # Perform matrix multiplication
+        # using NumPy's matmul function
+        result = np.matmul(np_a, np_b)
+
+        return result
 
     except ValueError:
         if any(len(row) != len(m_a[0]) for row in m_a[1:]):
@@ -71,14 +77,8 @@ def lazy_matrix_mul(m_a, m_b):
             raise TypeError(
                 "setting an array element with a sequence."
                 ) from None
-        raise # Re-raise if it's note the "sequence" error
+        raise  # Re-raise if it's note the "sequence" error
 
-    try:
-        # Perform matrix multiplication
-        # using NumPy's matmul function
-        result = np.matmul(np_a, np_b)
-
-        return result
     except ValueError as e:
         err = "shapes {} and {} not aligned: {} (dim 1) != {} (dim 0)"
         raise ValueError(

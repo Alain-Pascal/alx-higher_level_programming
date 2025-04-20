@@ -39,7 +39,7 @@ array([[ 9, 12, 15],
 ...     lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4], [5, 6]])
 ... except ValueError as e:
 ...     print(e)
-shapes (np_a.shape) and (np_b.shape) not aligned: (np_a.shape[1]) (dim 1) != (np_b.shape[0]) (dim 0)
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 3 is different from 2)
 
 # m_a is not a list
 >>> try:
@@ -83,53 +83,52 @@ invalid data type for einsum
 ...     print(e)
 invalid data type for einsum
 
-
 >>> try:
 ...     lazy_matrix_mul([[1, 2], [3]], [[1, 2], [3, 4]])
 ... except TypeError as e:
 ...     print(e)
-each row of m_a must be of the same size
+setting an array element with a sequence.
 
 >>> try:
 ...    lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3]])
 ... except TypeError as e:
 ...    print(e)
-each row of m_b must be of the same size
+setting an array element with a sequence.
 
 # Empty matrix m_a
 >>> try:
 ...     lazy_matrix_mul([], [[1, 2]])
 ... except ValueError as e:
 ...     print(e)
-m_a can't be empty
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 0)
 
 # m_a is an empty list of lists
 >>> try:
 ...     lazy_matrix_mul([[]], [[1, 2]])
 ... except ValueError as e:
 ...     print(e)
-m_a can't be empty
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 0)
 
 # m_a is an empty list of lists
 >>> try:
 ...     lazy_matrix_mul([[]], [[1, 2], [3, 4]])
 ... except ValueError as e:
 ...     print(e)
-m_a can't be empty
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 2 is different from 0)
 
 # Empty matrix m_b
 >>> try:
 ...     lazy_matrix_mul([[1, 2]], [])
 ... except ValueError as e:
 ...     print(e)
-m_b can't be empty
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 0 is different from 2)
 
 # m_b is an empty list of lists
 >>> try:
 ...     lazy_matrix_mul([[1, 2]], [[]])
 ... except ValueError as e:
 ...     print(e)
-m_b can't be empty
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 2)
 
 # Missing argument m_b
 >>> try:
