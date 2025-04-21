@@ -89,6 +89,7 @@ user@ubuntu:~/0x07$ python3 -c 'print(__import__("0-add_integer").add_integer.__
 3
 user@ubuntu:~/0x07$ 
 ```
+**Files:** [`0-add_integer.py`](./0-add_integer.py), [`0-add_integer.txt.test`](./tests/0-add_integer.txt), [`0-main.py`](./mainFiles/0-main.py)
 
 ### 1. Divide a matrix
 
@@ -124,6 +125,8 @@ user@ubuntu:~/0x07$
 ```
 Note: Tests should cover all possible cases.
 
+**Files:** [`2-matrix_divided.py`](./2-matrix_divided.py), [`2-matrix_divided.txt.test`](./tests/2-matrix_divided.txt), [`2-main.py`](./mainFiles/2-main.py)
+
 ### 2. Say my name
 
 Write a function that prints `My name is <first name> <last name>`.
@@ -157,6 +160,8 @@ user@ubuntu:~/0x07$
 ```
 
 Note: Tests should cover all possible cases.
+
+**Files:** [`3-say_my_name.py`](./3-say_my_name.py), [`3-say_my_name.txt.test`](./tests/3-say_my_name.txt), [`3-main.py`](./mainFiles/3-main.py)
 
 ### 3. Print square
 
@@ -214,6 +219,8 @@ user@ubuntu:~/0x07$ python3 -m doctest -v ./tests/4-print_square.txt
 user@ubuntu:~/0x07$
 ```
 
+**Files:** [`4-print_square.py`](./4-print_square.py), [`4-print_square.txt.test`](./tests/4-print_square.txt), [`4-main.py`](./mainFiles/4-main.py)
+
 ### 4. Text indentation
 
 Write a function that prints a text with 2 new lines after each of these characters: `.`, `?` and `:`
@@ -268,6 +275,8 @@ Utinam quidem dicerent alium alio beatiorem! Iam ruinas videresuser@ubuntu:~/0x0
 user@ubuntu:~/0x07$ python3 -m doctest -v ./tests/5-text_indentation.txt
 user@ubuntu:~/0x07$
 ```
+
+**Files:** [`5-text_indentation.py`](./5-text_indentation.py), [`5-text_indentation.txt.test`](./tests/5-text_indentation.txt), [`5-main.py`](./mainFiles/5-main.py)
 
 ### 5. Max integer - Unittest
 
@@ -328,6 +337,8 @@ class TestMaxInteger(unittest.TestCase):
 user@ubuntu:~/0x07$
 ```
 
+**Files:** [`6-max_integer.py`](./6-max_integer.py), [`6-max_integer_test.py`](./tests/6-max_integer_test.py), [`6-main.py`](./mainFiles/6-main.py)
+
 ## Optional Tasks
 
 ### 6. Matrix multiplication
@@ -363,6 +374,8 @@ Test passed.
 user@ubuntu:~/0x07$
 ```
 
+**Files:** [`100-matrix_mul.py`](./100-matrix_mul.py), [`100-matrix_mul.txt.test`](./tests/100-matrix_mul.txt), [`100-main.py`](./mainFiles/100-main.py)
+
 ### 7. Lazy matrix multiplication
 
 Write a function that multiplies 2 matrices by using the module [NumPy](https://numpy.org/doc/stable/)
@@ -386,6 +399,8 @@ user@ubuntu:~/0x07$ ./101-main.py
 user@ubuntu:~/0x07$ python3 -m doctest -v ./tests/101-lazy_matrix_mul.txt 
 user@ubuntu:~/0x07$ 
 ```
+
+**Files:** [`101-lazy_matrix_mul.py`](./101-lazy_matrix_mul.py), [`101-lazy_matrix_mul.txt.test`](./tests/101-lazy_matrix_mul.txt), [`101-main.py`](./mainFiles/101-main.py)
 
 ### 8. CPython #3: Python Strings
 
@@ -451,3 +466,5 @@ user@ubuntu:~/0x07. Pyhton Strings$ python3 ./102-tests.py
   [ERROR] Invalid String Object
 user@ubuntu:~/0x07. Pyhton Strings$
 ```
+
+**Files:** [`102-python.c`](./102-python.c), [`102-tests.py`](./tests/102-tests.py)
