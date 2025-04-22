@@ -1,8 +1,8 @@
 # 0x07. Python - Test-driven development
 
-A repository about object oriented programming in the Python programming language
+A repository about test-driven development in the Python programming language
 
-From the 00x07. Python - Test-driven development project at ALX-SE programme
+From the 0x07. Python - Test-driven development project at ALX-SE programme
 
 ## Concepts
 
