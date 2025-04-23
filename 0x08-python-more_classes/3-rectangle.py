@@ -2,7 +2,7 @@
 
 """
 This module defines a Rectangle class
-with width, height, area, and perimeter
+with width, height, area, perimeter, and a string representation
 """
 
 
@@ -10,7 +10,8 @@ class Rectangle:
     """
     A class that defines a rectangle
     with width and height, and can calculate
-    its area and perimeter
+    its area, perimeter, and provides
+    a string representation
     """
 
     def __init__(self, width=0, height=0):
@@ -112,3 +113,31 @@ class Rectangle:
             return 0
 
         return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """
+        Returns a string representation of the rectangle
+        using the '#' character
+
+        Returns:
+            str: string representing the rectangle
+                using the '#' char
+            empty str: if either width or height is 0
+        """
+
+        if self.__width == 0 or self.__height == 0:
+            return ""
+
+        return "\n".join("#" * self.__width for _ in range(self.__height))
+
+    def __repr__(self):
+        """
+        Returns a string representation
+        of the rectangle for eval()
+        """
+
+        return "<{}.{} object at {}>".format(
+            self.__class__.__module__,
+            self.__class__.__name__,
+            hex(id(self))  # Format the ID as hexadecimal
+            )
