@@ -3,6 +3,7 @@
 """
 This module defines a Rectangle class
 with width, height, area, perimeter, and a string representation
+The repr() is designed to allow recreation of the instance using eval()
 """
 
 
@@ -133,11 +134,11 @@ class Rectangle:
     def __repr__(self):
         """
         Returns a string representation
-        of the rectangle for eval()
+        of the rectangle object that can be used
+        to recreate the object using eval()
         """
 
-        return "<{}.{} object at {}>".format(
-            self.__class__.__module__,
-            self.__class__.__name__,
-            hex(id(self))  # Format the ID as hexadecimal
+        return "Rectangle({}, {})".format(
+            self.__width,
+            self.__height
             )
