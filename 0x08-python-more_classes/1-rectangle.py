@@ -13,7 +13,7 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
-		"""
+        """
         Initializes a Rectangle object
         with optional width and height
 
@@ -58,31 +58,31 @@ class Rectangle:
 
     @property
     def height(self):
-		"""
-		Gets the height of the rectangle
+        """
+        Gets the height of the rectangle
 
-		Returns:
-			int: height of the rectangle
-		"""
+        Returns:
+            int: height of the rectangle
+        """
 
-		return self.__height
+        return self.__height
 
-	@height.setter
-	def height(self, value):
-		"""
-		Sets the height of the rectangle
+    @height.setter
+    def height(self, value):
+        """
+        Sets the height of the rectangle
 
-		Args:
-			value (int): height value to set
+        Args:
+            value (int): height value to set
 
-		Raises:
-			TypeError: if value is not int
-			ValueError: if value is less than 0
-		"""
+        Raises:
+            TypeError: if value is not int
+            ValueError: if value is less than 0
+        """
 
-		if not isinstance(value, int):
-			raise TypeError("height must be an integer")
-		if value < 0:
-			raise ValueError("height must be >= 0")
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
 
-		self.__height = value
+        self.__height = value
