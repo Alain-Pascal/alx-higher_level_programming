@@ -6,7 +6,9 @@ Rectangle = __import__('3-rectangle').Rectangle
 
 my_rectangle = Rectangle(2, 4)
 
-print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+print("Area: {} - Perimeter: {}".format(
+    my_rectangle.area(), my_rectangle.perimeter())
+)
 
 del my_rectangle
 
