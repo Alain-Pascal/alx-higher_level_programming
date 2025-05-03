@@ -111,7 +111,11 @@ In the following code, do `a` and `b` point to the same object? Answer with `Yes
 
 ### 4. Right count =
 
-
+In the following code, do `a` and `b` point to the same object? Answer with `Yes` or `No`.
+```
+>>> a = 89
+>>> b = a
+```
 
 **Files:** [`4-answer.txt`](./4-answer.txt)
 
