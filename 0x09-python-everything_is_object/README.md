@@ -209,7 +209,12 @@ What do these 3 lines print?
 
 ### 13. And with a list, is it really the same
 
-
+What do these 3 lines print?
+```
+>>> l1 = [1, 2, 3]
+>>> l2 = l1
+>>> print(l1 is l2)
+```
 
 **Files:** [`13-answer.txt`](./13-answer.txt)
 
