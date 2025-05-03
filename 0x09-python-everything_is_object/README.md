@@ -382,7 +382,13 @@ a is b
 
 ### 26. Empty is not empty
 
+What does this script print?
 
+```
+a = ()
+b = ()
+a is b
+```
 
 **Files:** [`26-answer.txt`](./26-answer.txt)
 
