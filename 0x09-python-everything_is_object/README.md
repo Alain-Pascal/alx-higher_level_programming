@@ -370,7 +370,13 @@ a is b
 
 ### 25. Tuple or not
 
+What does this script print?
 
+```
+a = (1, 2)
+b = (1, 2)
+a is b
+```
 
 **Files:** [`25-answer.txt`](./25-answer.txt)
 
