@@ -322,7 +322,10 @@ user@ubuntu:~/0x09$
 
 ### 20. Tuple or not?
 
-
+```
+a = ()
+```
+Is `a` a tuple? Answer with `Yes` or `No`.
 
 **Files:** [`20-answer.txt`](./20-answer.txt)
 
