@@ -258,7 +258,15 @@ print(a)
 
 ### 17. List incrementation
 
+What does this script print?
+```
+def increment(n):
+    n.append(4)
 
+l = [1, 2, 3]
+increment(l)
+print(l)
+```
 
 **Files:** [`17-answer.txt`](./17-answer.txt)
 
