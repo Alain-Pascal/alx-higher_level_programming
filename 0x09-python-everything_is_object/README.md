@@ -83,7 +83,9 @@ Write the name of the function in the file, without `()`.
 
 ### 1. Where are you?
 
+How do you get the variable identifier (which is the memory address in the CPython implementation)?
 
+Write the name of the function in the file, without `()`.
 
 **Files:** [`1-answer.txt`](./1-answer.txt)
 
