@@ -485,14 +485,19 @@ user@ubuntu:~/0x09$
 
 ```
 
-**Files:** [`103-line1.txt`](./103-line1.txt) , [`103-line2.txt`](./103-line2.txt), [`103-init.py`](./mainFiles/103-init.py)
+**Files:** [`103-line1.txt`](./103-line1.txt) , [`103-line2.txt`](./103-line2.txt)
 
 ### 32. int 2/3
 
-
 ```
-
+user@ubuntu:/python3$ cat int.py 
+a = 1
+b = 1
+user@ubuntu:/python3$ 
 ```
+Assuming we are using a CPython implementation of Python3 with default options/configuration:
+* How many int objects are created by the execution of the first line of the script? (`103-line1.txt`)
+* How many int objects are created by the execution of the second line of the script (`103-line2.txt`)
 
 **Files:** [`104-line1.txt`](./104-line1.txt) , [`104-line2.txt`](./104-line2.txt), [`104-line3.txt`](./104-line3.txt) , [`104-line4.txt`](./104-line4.txt), [`104-line5.txt`](./104-line5.txt), [`104-init.py`](./mainFiles/104-init.py)
 
