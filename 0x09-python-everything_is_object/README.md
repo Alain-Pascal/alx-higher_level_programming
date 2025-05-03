@@ -418,13 +418,39 @@ Will the last line of this script print `139926795932424`? Answer with `Yes` or 
 ```
 Will the last line of this script print `139926795932424`? Answer with `Yes` or `No`.
 
-**Files:** [`20-answer.txt`](./20-answer.txt)
+**Files:** [`28-answer.txt`](./28-answer.txt)
 
 ## Optional Tasks
 
 ### 29. #pythonic
 
+Write a function `magic_string()` that returns a string “BestSchool” n times the number of the iteration (see code):
+* Format: see example
+* File should be maximum 4-line long (no documentation needed)
+* Not allowed to import any module
+```
+user@ubuntu:~/0x09$ cat 100-main.py
+#!/usr/bin/python3
+magic_string = __import__('100-magic_string').magic_string
 
+for i in range(10):
+    print(magic_string())
+
+user@ubuntu:~/0x09$ ./100-main.py | cat -e
+BestSchool$
+BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool$
+user@ubuntu:~/0x09$ wc -l 100-magic_string.py 
+4 100-magic_string.py
+user@ubuntu:~/0x09$ 
+```
 
 **Files:** [`100-magic_string.py`](./100-magic_string.py) , [`100.main.py`](./mainFiles/100-main.py)
 
