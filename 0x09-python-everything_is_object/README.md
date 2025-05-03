@@ -1,0 +1,301 @@
+# 0x09. Python - Everything is object
+
+A repository about object oriented programming in the Python programming language
+
+From the 0x09. Python - Everything is object project at ALX-SE programme
+
+## Background Context
+
+Now that we understand that everything is an object and have a little bit of knowledge, let's pause and look a little at how Python works with different types of objects.
+
+BTW, have you ever modified a variable without knowing it or wanting to? I mean:
+
+BTW, have you ever modified a variable without knowing it or wanting to? I mean:
+```
+>>> a = 1
+>>> b = a
+>>> a = 2
+>>> b
+1
+>>>
+```
+
+Ok. But what about this?
+```
+>>> l = [1, 2, 3]
+>>> m = l
+>>> l[0] = 'x'
+>>> m
+['x', 2, 3]
+>>>
+```
+
+This project is a little bit different than the usual projects. The first part is only questions about Python’s specificity like “What would be the result of…”. You should **read all documentation first (as usual :))**, then take the time to **think and brainstorm with your peers** about what you think and why. **Try to do this without coding anything for a few hours**
+
+Trying examples in the Python interpreter will give you most of the answers without having to think about it. **Don’t go this route**. First read, then think, then brainstorm together. Only then you can test in the interpreter.
+
+It’s important that you truly understand the reasons behind the answers of all those tasks so that you can apply the same logic to other variables and other variable types.
+
+**You will most likely have to answer to these type of questions** during interviews for Python positions.
+
+All answers should be only one line in a file. No space before or after the answer.
+
+
+## Resources
+
+**Read or watch:**
+
+* [9.10. Objects and values](https://www.openbookproject.net/thinkcs/python/english2e/ch09.html#objects-and-values)
+* [9.11. Aliasing](https://www.openbookproject.net/thinkcs/python/english2e/ch09.html#aliasing)
+* [Immutable vs nutable types](https://stackoverflow.com/questions/8056130/immutable-vs-mutable-types)
+* [Muttions](https://www.composingprograms.com/pages/24-mutable-data.html) (_Only this chapter_)
+* [9.12. Cloning lists](https://www.openbookproject.net/thinkcs/python/english2e/ch09.html#cloning-lists)
+* [Python tuples: immutable but potentially changing](http://radar.oreilly.com/2014/10/python-tuples-immutable-but-potentially-changing.html)
+
+## Requirements
+
+### Python Scripts
+
+* Allowed editors: `vi`, `vim`, `emacs`
+* All files will be compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+* All files should end with a new line
+* The first line of all files should be exactly `#!/usr/bin/python3`
+* A `README.md` file, at the root of the folder of the project is mandatory
+* Code should use the pycodestyle (version `2.8.*`)
+* All files must be executable
+* The length of files will be tested using `wc`
+
+### `.txt` Answer Files
+
+* Only one line
+* No Shebang
+* All files should end with a new line
+
+## Mandatory Tasks
+
+### 0. Who am I?
+
+
+
+**Files:** [`0-answer.txt`](./0-answer.txt)
+
+### 1. Where are you?
+
+
+
+**Files:** [`1-answer.txt`](./1-answer.txt)
+
+### 2. Right count
+
+
+
+**Files:**  [`2-answer.txt`](./2-answer.txt)
+
+### 3. Right count =
+
+
+
+**Files:** [`3-answer.txt`](./3-answer.txt)
+
+### 4. Right count =
+
+
+
+**Files:** [`4-answer.txt`](./4-answer.txt)
+
+### 5. Right count =+
+
+
+
+**Files:** [`5-answer.txt`](./5-answer.txt)
+
+### 6. Is equal
+
+
+
+**Files:** [`6-answer.txt`](./6-answer.txt)
+
+### 7. Is the same
+
+
+
+**Files:** [`7-answer.txt`](./7-answer.txt)
+
+### 8. Is really equal
+
+
+
+**Files:** [`8-answer.txt`](./8-answer.txt)
+
+### 9. Is really the same
+
+
+
+**Files:** [`9-answer.txt`](./9-answer.txt)
+
+### 10. And with a list, is it equal
+
+
+
+**Files:** [`10-answer.txt`](./10-answer.txt)
+
+### 11. And with a list, is it the same
+
+
+
+**Files:** [`11-answer.txt`](./11-answer.txt)
+
+### 12. And with a list, is it really equal
+
+
+
+**Files:** [`12-answer.txt`](./12-answer.txt)
+
+### 13. And with a list, is it really the same
+
+
+
+**Files:** [`13-answer.txt`](./13-answer.txt)
+
+### 14. List append
+
+
+
+**Files:** [`14-answer.txt`](./14-answer.txt)
+
+### 15. List add
+
+
+
+**Files:** [`15-answer.txt`](./15-answer.txt)
+
+### 16. Integer incrementation
+
+
+
+**Files:** [`16-answer.txt`](./16-answer.txt)
+
+### 17. List incrementation
+
+
+
+**Files:** [`17-answer.txt`](./17-answer.txt)
+
+### 18. List assignation
+
+
+
+**Files:** [`18-answer.txt`](./18answer.txt)
+
+### 19. Copy a list object
+
+
+
+**Files:** [`19-copy_list.py`](./19-copy_list.py) , [`19.main.py`](./mainFiles/19-main.py)
+
+### 20. Tuple or not?
+
+
+
+**Files:** [`20-answer.txt`](./20-answer.txt)
+
+### 21. Tuple or not?
+
+
+
+**Files:** [`21-answer.txt`](./21-answer.txt)
+
+### 22. Tuple or not?
+
+
+
+**Files:** [`22-answer.txt`](./22-answer.txt)
+
+### 23. Tuple or not?
+
+
+
+**Files:** [`23-answer.txt`](./23-answer.txt)
+
+### 24. Who I am?
+
+
+
+**Files:** [`24-answer.txt`](./24-answer.txt)
+
+### 25. Tuple or not
+
+
+
+**Files:** [`25-answer.txt`](./25-answer.txt)
+
+### 26. Empty is not empty
+
+
+
+**Files:** [`26-answer.txt`](./26-answer.txt)
+
+### 27. Still the same?
+
+
+
+**Files:** [`27-answer.txt`](./27-answer.txt)
+
+### 28. Smae or not?
+
+
+
+**Files:** [`20-answer.txt`](./20-answer.txt)
+
+## Optional Tasks
+
+### 29. #pythonic
+
+
+
+**Files:** [`100-magic_string.py`](./100-magic_string.py) , [`100.main.py`](./mainFiles/100-main.py)
+
+### 30. Low memory cost
+
+
+```
+
+```
+
+**Files:** [`101-locked_class.py`](./101-locked_class.py) , [`101.main.py`](./mainFiles/101-main.py)
+
+### 31. int 1/3
+
+
+```
+
+```
+
+**Files:** [`103-line1.txt`](./103-line1.txt) , [`103-line2.txt`](./103-line2.txt), [`103-init.py`](./mainFiles/103-init.py)
+
+### 32. int 2/3
+
+
+```
+
+```
+
+**Files:** [`104-line1.txt`](./104-line1.txt) , [`104-line2.txt`](./104-line2.txt), [`104-line3.txt`](./104-line3.txt) , [`104-line4.txt`](./104-line4.txt), [`104-line5.txt`](./104-line5.txt), [`104-init.py`](./mainFiles/104-init.py)
+
+### 33. int 3/3
+
+
+```
+
+```
+
+**Files:** [`105-line1.txt`](./105-line1.txt), [`105-init.py`](./mainFiles/105-init.py)
+
+### 34. Clear strings
+
+
+```
+
+```
+
+**Files:** [`106-line1.txt`](./106-line1.txt) , [`106-line2.txt`](./106-line2.txt), [`106-line3.txt`](./106-line3.txt) , [`106-line4.txt`](./106-line4.txt), [`106-line5.txt`](./106-line5.txt), [`106-string.py`](./mainFiles/104-string.py)
