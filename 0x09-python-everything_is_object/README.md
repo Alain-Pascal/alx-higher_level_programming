@@ -287,7 +287,36 @@ print(l1)
 
 ### 19. Copy a list object
 
+Write a function `def copy_list(l):` that returns a **copy** of a list.
+* The input list can contain any type of objects
+* File should be maximum 3-line long (no documentation needed)
+* Not allowed to import any module
+```
+user@ubuntu:~/0x09$ cat 19-main.py
+#!/usr/bin/python3
+copy_list = __import__('19-copy_list').copy_list
 
+my_list = [1, 2, 3]
+print(my_list)
+
+new_list = copy_list(my_list)
+
+print(my_list)
+print(new_list)
+
+print(new_list == my_list)
+print(new_list is my_list)
+
+user@ubuntu:~/0x09$ ./19-main.py
+[1, 2, 3]
+[1, 2, 3]
+[1, 2, 3]
+True
+False
+user@ubuntu:~/0x09$ wc -l 19-copy_list.py 
+3 19-copy_list.py
+user@ubuntu:~/0x09$ 
+```
 
 **Files:** [`19-copy_list.py`](./19-copy_list.py) , [`19.main.py`](./mainFiles/19-main.py)
 
