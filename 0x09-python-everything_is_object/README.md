@@ -176,7 +176,12 @@ What do these 3 lines print?
 
 ### 10. And with a list, is it equal
 
-
+What do these 3 lines print?
+```
+>>> l1 = [1, 2, 3]
+>>> l2 = [1, 2, 3]
+>>> print(l1 == l2)
+```
 
 **Files:** [`10-answer.txt`](./10-answer.txt)
 
