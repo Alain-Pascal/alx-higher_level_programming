@@ -232,7 +232,13 @@ print(l2)
 
 ### 15. List add
 
-
+What does this script print?
+```
+l1 = [1, 2, 3]
+l2 = l1
+l1 = l1 + [4]
+print(l2)
+```
 
 **Files:** [`15-answer.txt`](./15-answer.txt)
 
