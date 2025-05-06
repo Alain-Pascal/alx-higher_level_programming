@@ -350,10 +350,26 @@ user@ubuntu:~/0x0A$
 
 ### 10. Square #1
 
-
+Write a class `Square` that inherits from `Rectangle` ([`9-rectangle.py`](./9-rectangle.py)):
+* Instantiation with `size`: `def __init__(self, size):`:
+    * `size` must be private. No getter or setter
+    * `size` must be a positive integer, validated by `integer_validator`
+* the `area()` method must be implemented
 
 ```
+user@ubuntu:~/0x0A$ cat 10-main.py
+#!/usr/bin/python3
+Square = __import__('10-square').Square
 
+s = Square(13)
+
+print(s)
+print(s.area())
+
+user@ubuntu:~/0x0A$ ./10-main.py
+[Rectangle] 13/13
+169
+user@ubuntu:~/0x0A$
 ```
 
 **Files:** [`10-square.py`](./10-square.py), [`10-main.py`](./mainFiles/10-main.py)
