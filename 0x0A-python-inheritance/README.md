@@ -405,10 +405,25 @@ user@ubuntu:~/0x0A$
 
 ### 12. My integer
 
-
+Write a class `MyInt` that inherits from `int`:
+* `MyInt` is a rebel. `MyInt` has `==` and `!=` operators inverted
+* Not allowed to import any module
 
 ```
+user@ubuntu:~/0x0A$ cat 100-main.py
+#!/usr/bin/python3
+MyInt = __import__('100-my_int').MyInt
 
+my_i = MyInt(3)
+print(my_i)
+print(my_i == 3)
+print(my_i != 3)
+
+user@ubuntu:~/0x0A$ ./100-main.py
+3
+False
+True
+user@ubuntu:~/0x0A$
 ```
 
 **Files:** [`100-my_int.py`](./100-my_int.py), [`100-main.py`](./mainFiles/11-main.py)
