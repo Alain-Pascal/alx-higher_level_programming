@@ -110,14 +110,29 @@ user@ubuntu:~/0x0A$
 
 **Files:** [`1-my_list.py`](./1-my_list.py), [`1-main.py`](./mainFiles/1-main.py), [`1-my_list.txt`](./tests/1-my_list.txt)
 
-### 2. Exact same objec
+### 2. Exact same object
 
-
+Write a function that returns `True` if the object is _exactly_ an instance of the specified class ; otherwise `False`.
+* Prototype: `def is_same_class(obj, a_class):`
+* Not allowed to import any module
 
 ```
+user@ubuntu:~/0x0A$ cat 2-main.py
+#!/usr/bin/python3
+is_same_class = __import__('2-is_same_class').is_same_class
 
+a = 1
+if is_same_class(a, int):
+    print("{} is an instance of the class {}".format(a, int.__name__))
+if is_same_class(a, float):
+    print("{} is an instance of the class {}".format(a, float.__name__))
+if is_same_class(a, object):
+    print("{} is an instance of the class {}".format(a, object.__name__))
+
+user@ubuntu:~/0x0A$ ./2-main.py
+1 is an instance of the class int
+user@ubuntu:~/0x0A$ 
 ```
-
 
 **Files:**  [`2-is_same_class.py`](./2-is_same_class.py), [`2-main.py`](./mainFiles/2-main.py)
 
