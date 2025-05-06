@@ -217,10 +217,25 @@ user@ubuntu:~/0x0A$
 
 ### 6. Improve Geometry
 
-
+Write a class `BaseGeometry` (based on [`5-base_geometry.py`](./5-base_geometry.py)).
+* Public instance method: `def area(self):` that raises an `Exception` with the message `area() is not implemented`
+* Not allowed to import any module
 
 ```
+user@ubuntu:~/0x0A$ cat 6-main.py
+#!/usr/bin/python3
+BaseGeometry = __import__('6-base_geometry').BaseGeometry
 
+bg = BaseGeometry()
+
+try:
+    print(bg.area())
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+user@ubuntu:~/0x0A$ ./6-main.py
+[Exception] area() is not implemented
+user@ubuntu:~/0x0A$ 
 ```
 
 **Files:** [`6-base_geometry.py`](./6-base_geometry.py), [`6-main.py`](./mainFiles/6-main.py)
