@@ -109,7 +109,7 @@ Write a function that appends a string at the end of a text file (`UTF8`) and re
 * Prototype: `def append_write(filename="", text=""):`
 * If the file doesn’t exist, it should be created
 * Use the `with` statement
-* N0 need to manage `file permission` or `file doesn't exist` exceptions.
+* No need to manage `file permission` or `file doesn't exist` exceptions.
 * Not allowed to import any module
 
 ```
@@ -232,7 +232,11 @@ user@ubuntu:~/0x0B$
 
 ### 5. Save Object to a file
 
-s
+Write a function that writes an Object to a text file, using a JSON representation:
+* Prototype: `def save_to_json_file(my_obj, filename):`
+* Use the `with` statement
+* No need to manage exceptions if the object can’t be serialized.
+* No need to manage file permission exceptions.
 
 ```
 user@ubuntu:~/0x0B$ cat 5-main.py
