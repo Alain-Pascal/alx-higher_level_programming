@@ -668,13 +668,17 @@ user@ubuntu:~/0x0B$ ./12-main.py
 user@ubuntu:~/0x0B$  
 ```
 
-**Files:** [`12-pascal_triangle.py`](./11-pascal_triangle.py), [`12-main.py`](./mainFiles/12-main.py)
+**Files:** [`12-pascal_triangle.py`](./12-pascal_triangle.py), [`12-main.py`](./mainFiles/12-main.py)
 
 ## Optional Tasks
 
 ### 13. Search and update
 
-
+Write a function that inserts a line of text to a file, after each line containing a specific string (see example):
+* Prototype: `def append_after(filename="", search_string="", new_string=""):`
+* Use the `with` statement
+* No need to manage `file permission` or `file doesn't exist` exceptions.
+* Not allowed to import any module
 
 ```
 user@ubuntu:~/0x0B$ cat 100-main.py
