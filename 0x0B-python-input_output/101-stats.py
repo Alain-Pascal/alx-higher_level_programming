@@ -26,7 +26,7 @@ def main():
                     file_size = int(line_parts[-1])  # get from the end
                     total_file_size += file_size
                     status_code_counts[status_code] += 1
-                except (ValueError, IndexError):
+                except ValueError:
                     # Handle cases where status/size are not ints or missing
                     pass  # silently skip bad lines. Don't crush
 
@@ -36,8 +36,9 @@ def main():
                 print_stats(total_file_size, status_code_counts)
 
     except KeyboardInterrupt:
-        print_stats(total_file_size, status_code_counts)
-        raise
+        pass  # prevent printing twice
+
+    print_stats(total_file_size, status_code_counts)  # final print
 
 
 def print_stats(total_file_size, status_code_counts):
