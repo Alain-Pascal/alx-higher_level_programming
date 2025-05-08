@@ -17,17 +17,18 @@ def main():
 
     try:
         for line in sys.stdin:
+            line = line.strip()
             line_parts = line.split()
 
-            if len(line_parts) >= 10:
-                status_code = line_parts[8]
-                file_size_str = line_parts[9]  # corrected index
-
-                if status_code.isdigit() and file_size_str.isdigit():
-                    status_code = int(status_code)
-                    file_size = int(file_size)
+            if len(line_parts) >= 7:  # minimum length of a valid line
+                try:
+                    status_code = int(line_parts[-2])  # get from the end
+                    file_size = int(line_parts[-1])  # get from the end
                     total_file_size += file_size
                     status_code_counts[status_code] += 1
+                except (ValueError, indexError):
+                    # Handle cases where status/size are not ints or missing
+                    pass  # silently skip bad lines. Don't crush
 
             line_count += 1
 
