@@ -187,7 +187,9 @@ user@ubuntu:~/0x0B$
 
 ### 4. From JSON string to Object
 
-
+Write a function that returns an object (Python data structure) represented by a JSON string:
+* Prototype: `def to_json_string(my_str):`
+* No need to manage exceptions if the object can’t be serialized.
 
 ```
 user@ubuntu:~/0x0B$ cat 4-main.py
