@@ -282,7 +282,11 @@ user@ubuntu:~/0x0B$
 
 ### 6. Create object from a JSON file
 
-
+Write a function that creates an Object from a “JSON file”:
+* Prototype: `def load_from_json_file(filename):`
+* Use the `with` statement
+* No need to manage exceptions if the JSON string doesn’t represent an object.
+* No need to manage file permissions/exceptions.
 
 ```
 user@ubuntu:~/0x0B$ cat my_fake.json
