@@ -48,7 +48,11 @@ From the 0x0B. Python - Input/Output project at ALX-SE programme
 
 ### 0. Read file
 
-
+Write a function that reads a text file (`UTF8`) and prints it to stdout:
+* Prototype: `def read_file(filename=""):`
+* Use the `with` statement
+* No need to manage `file permission` or `file doesn't exist` exceptions.
+* Not allowed to import any module
 
 ```
 user@ubuntu:~/0x0B$ cat 0-main.py
