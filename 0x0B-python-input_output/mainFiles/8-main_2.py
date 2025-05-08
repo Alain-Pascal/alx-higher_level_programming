@@ -2,11 +2,11 @@
 import sys
 
 sys.path.append("../0x0B-python-input_output")
-MyClass = __import__('8-my_class').MyClass
+MyClass = __import__('8-my_class_2').MyClass
 class_to_json = __import__('8-class_to_json').class_to_json
 
 m = MyClass("John")
-m.number = 89
+m.win()
 print(type(m))
 print(m)
 
