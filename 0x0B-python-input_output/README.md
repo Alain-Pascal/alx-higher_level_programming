@@ -138,7 +138,9 @@ user@ubuntu:~/0x0B$
 
 ### 3. To JSON string
 
-
+Write a function that returns the JSON representation of an object (string):
+* Prototype: `def to_json_string(my_obj):`
+* No need to manage exceptions if the object can’t be serialized.
 
 ```
 user@ubuntu:~/0x0B$ cat 3-main.py

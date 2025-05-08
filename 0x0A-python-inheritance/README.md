@@ -426,7 +426,7 @@ True
 user@ubuntu:~/0x0A$
 ```
 
-**Files:** [`100-my_int.py`](./100-my_int.py), [`100-main.py`](./mainFiles/11-main.py)
+**Files:** [`100-my_int.py`](./100-my_int.py), [`100-main.py`](./mainFiles/100-main.py)
 
 ### 13. Can I?
 
