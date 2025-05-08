@@ -95,7 +95,7 @@ nb_characters = write_file("my_first_file.txt", "This School is so cool!\n")
 print(nb_characters)
 
 user@ubuntu:~/0x0B$ ./1-main.py
-29
+24
 user@ubuntu:~/0x0B$ cat my_first_file.txt
 This School is so cool!
 user@ubuntu:~/0x0B$ 
@@ -105,7 +105,12 @@ user@ubuntu:~/0x0B$
 
 ### 2. Append to a file
 
-
+Write a function that appends a string at the end of a text file (`UTF8`) and returns the number of characters added:
+* Prototype: `def append_write(filename="", text=""):`
+* If the file doesn’t exist, it should be created
+* Use the `with` statement
+* N0 need to manage `file permission` or `file doesn't exist` exceptions.
+* Not allowed to import any module
 
 ```
 user@ubuntu:~/0x0B$ cat 2-main.py
@@ -118,11 +123,11 @@ print(nb_characters_added)
 user@ubuntu:~/0x0B$ cat file_append.txt
 cat: file_append.txt: No such file or directory
 s@ubuntu:~/0x0B$ ./2-main.py
-29
+24
 user@ubuntu:~/0x0B$ cat file_append.txt
 This School is so cool!
 user@ubuntu:~/0x0B$ ./2-main.py
-29
+24
 user@ubuntu:~/0x0B$ cat file_append.txt
 This School is so cool!
 This School is so cool!
