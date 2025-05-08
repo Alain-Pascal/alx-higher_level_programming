@@ -629,7 +629,15 @@ user@ubuntu:~/0x0B$
 
 ### 12. Pascal's Triangle
 
+**Technical interview preparation:**
 
+  * Not allowed to google anything
+  * Whiteboard first
+
+Create a function `def pascal_triangle(n):` that returns a list of lists of integers representing the Pascal’s triangle of `n`:
+  * Returns an empty list if `n <= 0`
+  * Assume `n` will be always an integer
+  * Not allowed to import any module
 
 ```
 user@ubuntu:~/0x0B$ cat 12-main.py
