@@ -78,7 +78,13 @@ user@ubuntu:~/0x0B$
 
 ### 1. Write to a file
 
-
+Write a function that writes a string to a text file (`UTF8`) and returns the number of characters written:
+* Prototype: `def write_file(filename="", text=""):`
+* Use the `with` statement
+* No need to manage file permission exceptions.
+* Function should create the file if doesn’t exist.
+* Function should overwrite the content of the file if it already exists.
+* Not allowed to import any module
 
 ```
 user@ubuntu:~/0x0B$ cat 1-main.py
