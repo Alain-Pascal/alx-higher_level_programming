@@ -26,7 +26,7 @@ def main():
                     file_size = int(line_parts[-1])  # get from the end
                     total_file_size += file_size
                     status_code_counts[status_code] += 1
-                except (ValueError, indexError):
+                except (ValueError, IndexError):
                     # Handle cases where status/size are not ints or missing
                     pass  # silently skip bad lines. Don't crush
 
