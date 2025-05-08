@@ -457,10 +457,18 @@ user@ubuntu:~/0x0B$ ./8-main_2.py
 user@ubuntu:~/0x0B$
 ```
 
-**Files:** [`8-class_to_json.py`](./8-class_to_json.py), [`8-main.py`](./mainFiles/8-main.py)
+**Files:** [`8-class_to_json.py`](./8-class_to_json.py), [`8-main.py`](./mainFiles/8-main.py), [`8-main_2.py`](./mainFiles/8-main_2.py), [`8-my_class.py`](./mainFiles/8-my_class.py), [`8-my_class_2.py`](./mainFiles/8-my_class_2.py)
 
 ### 9. Student to JSON
 
+Write a class `Student` that defines a student by:
+* Public instance attributes:
+  * `first_name`
+  * `last_name`
+  * `age`
+* Instantiation with `first_name`, `last_name` and `age`: `def __init__(self, first_name, last_name, age):`
+* Public method `def to_json(self):` that retrieves a dictionary representation of a `Student` instance (same as [`8-class_to_json.py`](./8-class_to_json.py))
+* Not allowed to import any module
 
 
 ```
