@@ -4,6 +4,7 @@ Defines a base class for all other classes in the project.
 """
 
 import json
+import os
 
 
 class Base:
@@ -95,3 +96,20 @@ class Base:
         # update the dummy instance with real values
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Return a list of instances from a JSON file
+
+        Returns:
+            list: a list of instances of the class
+        """
+        filename = "{}.json".format(cls.__name__)
+        if not os.path.exists(filename):
+            return []
+
+        with open(filename, 'r') as file:
+            json_string = file.read()
+            list_dicts = cls.from_json_string(json_string)
+            return [cls.create(**d) for d in list_dicts]

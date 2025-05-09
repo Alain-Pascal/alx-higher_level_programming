@@ -828,7 +828,11 @@ user@ubuntu:~/$
 
 ### 19. File to instances
 
-
+Update the class `Base` by adding the class method `def load_from_file(cls):` that returns a list of instances:
+* The filename must be: `<Class name>.json` - example: `Rectangle.json`
+* If the file doesn’t exist, return an empty list
+* Otherwise, return a list of instances - the type of these instances depends on `cls` (current class using this method)
+* Use the `from_json_string` and `create` methods (implemented previously)
 
 ```
 user@ubuntu:~/$ cat 18-main.py
