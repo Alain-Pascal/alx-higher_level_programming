@@ -20,15 +20,19 @@ def main():
             line = line.strip()
             line_parts = line.split()
 
-            if len(line_parts) >= 7:  # minimum length of a valid line
+            # validate line format
+            if len(line_parts) >= 2:  # minimum length of a valid line
                 try:
-                    status_code = int(line_parts[-2])  # get from the end
-                    file_size = int(line_parts[-1])  # get from the end
+                    # attempt to parse status code and file size
+                    status_code = int(line_parts[-2])
+                    file_size = int(line_parts[-1])
+
+                    # update metrics
                     total_file_size += file_size
                     status_code_counts[status_code] += 1
-                except ValueError:
-                    # Handle cases where status/size are not ints or missing
-                    pass  # silently skip bad lines. Don't crush
+                except (ValueError, IndexError):
+                    # skip lines with invalid format
+                    continue
 
             line_count += 1
 
@@ -36,7 +40,8 @@ def main():
                 print_stats(total_file_size, status_code_counts)
 
     except KeyboardInterrupt:
-        pass  # prevent printing twice
+        print_stats(total_file_size, status_code_counts)
+        raise
 
     print_stats(total_file_size, status_code_counts)  # final print
 
