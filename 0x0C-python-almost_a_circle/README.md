@@ -227,10 +227,30 @@ user@ubuntu:~/$
 
 ### 4. Area first
 
-
+Update the class `Rectangle` by adding the public method `def area(self):` that returns the area value of the `Rectangle` instance.
 
 ```
+user@ubuntu:~/$ cat 3-main.py
+#!/usr/bin/python3
+""" 3-main """
+from models.rectangle import Rectangle
 
+if __name__ == "__main__":
+
+    r1 = Rectangle(3, 2)
+    print(r1.area())
+
+    r2 = Rectangle(2, 10)
+    print(r2.area())
+
+    r3 = Rectangle(8, 7, 0, 0, 12)
+    print(r3.area())
+
+user@ubuntu:~/$ ./3-main.py
+6
+20
+56
+user@ubuntu:~/$
 ```
 
 **Files:** [`rectangle.py`](./models/rectangle.py), [`3-main.py`](./3-main.py)
