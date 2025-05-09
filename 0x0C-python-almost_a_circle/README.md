@@ -726,7 +726,12 @@ user@ubuntu:~/$
 
 ### 16. JSON string to file
 
-
+Update the class `Base` by adding the class method `def save_to_file(cls, list_objs):` that writes the JSON string representation of `list_objs` to a file:
+* `list_objs` is a list of instances who inherits of `Base` - example: list of `Rectangle` or list of `Square` instances
+* If `list_objs` is `None`, save an empty list
+* The filename must be: `<Class name>.json` - example: `Rectangle.json`
+* Use the static method `to_json_string` (created before)
+* Overwrite the file if it already exists
 
 ```
 user@ubuntu:~/$ cat 15-main.py
@@ -752,7 +757,10 @@ user@ubuntu:~/$
 
 ### 17. JSON string to dictionary
 
-
+Update the class `Base` by adding the static method `def from_json_string(json_string):` that returns the list of the JSON string representation `json_string`:
+* `json_string` is a string representing a list of dictionaries
+* If `json_string` is `None` or empty, return an empty list
+* Otherwise, return the list represented by `json_string`
 
 ```
 user@ubuntu:~/$ cat 16-main.py
@@ -783,7 +791,14 @@ user@ubuntu:~/$
 
 ### 18. Dictionary to Instance
 
-
+Update the class `Base` by adding the class method `def create(cls, **dictionary):` that returns an instance with all attributes already set:
+* `**dictionary` can be thought of as a double pointer to a dictionary
+* To use the `update` method to assign all attributes, you must create a “dummy” instance before:
+    * Create a `Rectangle` or `Square` instance with “dummy” mandatory attributes (width, height, size, etc.)
+    * Call `update` instance method to this “dummy” instance to apply your real values
+* Use the method `def update(self, *args, **kwargs)`
+* `**dictionary` must be used as `**kwargs` of the method `update`
+* Not allowed to use `eval`
 
 ```
 user@ubuntu:~/$ cat 17-main.py
