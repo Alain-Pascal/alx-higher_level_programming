@@ -648,7 +648,13 @@ user@ubuntu:~/$
 
 ### 14. Square instance to dictionary representation
 
+Update the class `Square` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Square`:
 
+This dictionary must contain:
+* `id`
+* `size`
+* `x`
+* `y`
 
 ```
 user@ubuntu:~/$ cat 13-main.py
