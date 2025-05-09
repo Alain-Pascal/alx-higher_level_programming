@@ -87,10 +87,21 @@ _Note that this is just an example. The number of tests you create can be differ
 
 ### 1. Base class
 
+Write the first class `Base`:
 
+Create a folder named `models` with an empty file `__init__.py` inside - with this file, the folder will become a Python package
+
+Create a file named `models/base.py`:
+* Class `Base`:
+    * private class attribute `__nb_objects = 0`
+    * class constructor: `def __init__(self, id=None):`:
+        * if `id` is not `None`, assign the public instance attribute `id` with this argument value - you can assume id is an integer and you don’t need to test the type of it
+        * otherwise, increment `__nb_objects` and assign the new value to the public instance attribute `id`
+
+This class will be the “base” of all other classes in this project. The goal of it is to manage `id` attribute in all your future classes and to avoid duplicating the same code (by extension, same bugs)
 
 ```
-guillaume@ubuntu:~/$ cat 0-main.py
+user@ubuntu:~/$ cat 0-main.py
 #!/usr/bin/python3
 """ 0-main """
 from models.base import Base
@@ -112,13 +123,13 @@ if __name__ == "__main__":
     b5 = Base()
     print(b5.id)
 
-guillaume@ubuntu:~/$ ./0-main.py
+user@ubuntu:~/$ ./0-main.py
 1
 2
 3
 12
 4
-guillaume@ubuntu:~/$ 
+user@ubuntu:~/$ 
 ```
 
 **Files:** [`0-main.py`](./0-main.py), [`base.py`](./models/base.py), [`__init__.py`](./models/__init__.py)
@@ -128,7 +139,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 1-main.py
+user@ubuntu:~/$ cat 1-main.py
 #!/usr/bin/python3
 """ 1-main """
 from models.rectangle import Rectangle
@@ -144,11 +155,11 @@ if __name__ == "__main__":
     r3 = Rectangle(10, 2, 0, 0, 12)
     print(r3.id)
 
-guillaume@ubuntu:~/$ ./1-main.py
+user@ubuntu:~/$ ./1-main.py
 1
 2
 12
-guillaume@ubuntu:~/$ 
+user@ubuntu:~/$ 
 ```
 
 **Files:**  [`rectangle.py`](./models/rectangle.py), [`1-main.py`](./1-main.py)
@@ -158,7 +169,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 2-main.py
+user@ubuntu:~/$ cat 2-main.py
 #!/usr/bin/python3
 """ 2-main """
 from models.rectangle import Rectangle
@@ -187,12 +198,12 @@ if __name__ == "__main__":
     except Exception as e:
         print("[{}] {}".format(e.__class__.__name__, e))
 
-guillaume@ubuntu:~/$ ./2-main.py
+user@ubuntu:~/$ ./2-main.py
 [TypeError] height must be an integer
 [ValueError] width must be > 0
 [TypeError] x must be an integer
 [ValueError] y must be >= 0
-guillaume@ubuntu:~/$
+user@ubuntu:~/$
 ```
 
 **Files:** [`rectangle.py`](./models/rectangle.py), [`2-main.py`](./2-main.py)
@@ -212,7 +223,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 4-main.py
+user@ubuntu:~/$ cat 4-main.py
 #!/usr/bin/python3
 """ 4-main """
 from models.rectangle import Rectangle
@@ -227,7 +238,7 @@ if __name__ == "__main__":
     r1 = Rectangle(2, 2)
     r1.display()
 
-guillaume@ubuntu:~/$ ./4-main.py
+user@ubuntu:~/$ ./4-main.py
 ####
 ####
 ####
@@ -237,7 +248,7 @@ guillaume@ubuntu:~/$ ./4-main.py
 ---
 ##
 ##
-guillaume@ubuntu:~/$
+user@ubuntu:~/$
 ```
 
 **Files:** [`rectangle.py`](./models/rectangle.py), [`4-main.py`](./4-main.py)
@@ -247,7 +258,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 5-main.py
+user@ubuntu:~/$ cat 5-main.py
 #!/usr/bin/python3
 """ 5-main """
 from models.rectangle import Rectangle
@@ -260,10 +271,10 @@ if __name__ == "__main__":
     r2 = Rectangle(5, 5, 1)
     print(r2)
 
-guillaume@ubuntu:~/$ ./5-main.py
+user@ubuntu:~/$ ./5-main.py
 [Rectangle] (12) 2/1 - 4/6
 [Rectangle] (1) 1/0 - 5/5
-guillaume@ubuntu:~/$ 
+user@ubuntu:~/$ 
 ```
 
 **Files:** [`rectangle.py`](./models/rectangle.py), [`5-main.py`](./5-main.py)
@@ -273,7 +284,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 6-main.py
+user@ubuntu:~/$ cat 6-main.py
 #!/usr/bin/python3
 """ 6-main """
 from models.rectangle import Rectangle
@@ -288,7 +299,7 @@ if __name__ == "__main__":
     r2 = Rectangle(3, 2, 1, 0)
     r2.display()
 
-guillaume@ubuntu:~/$ ./6-main.py | cat -e
+user@ubuntu:~/$ ./6-main.py | cat -e
 $
 $
   ##$
@@ -297,7 +308,7 @@ $
 ---$
  ###$
  ###$
-guillaume@ubuntu:~/$
+user@ubuntu:~/$
 ```
 
 **Files:** [`rectangle.py`](./models/rectangle.py), [`6-main.py`](./6-main.py)
@@ -307,7 +318,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 7-main.py
+user@ubuntu:~/$ cat 7-main.py
 #!/usr/bin/python3
 """ Doc """
 from models.rectangle import Rectangle
@@ -332,14 +343,14 @@ if __name__ == "__main__":
     r1.update(89, 2, 3, 4, 5)
     print(r1)
 
-guillaume@ubuntu:~/$ ./7-main.py
+user@ubuntu:~/$ ./7-main.py
 [Rectangle] (1) 10/10 - 10/10
 [Rectangle] (89) 10/10 - 10/10
 [Rectangle] (89) 10/10 - 2/10
 [Rectangle] (89) 10/10 - 2/3
 [Rectangle] (89) 4/10 - 2/3
 [Rectangle] (89) 4/5 - 2/3
-guillaume@ubuntu:~/$
+user@ubuntu:~/$
 ```
 
 **Files:** [rectangle.py`](./models/rectangle.py), [`7-main.py`](./7-main.py)
@@ -349,7 +360,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 8-main.py
+user@ubuntu:~/$ cat 8-main.py
 #!/usr/bin/python3
 """ 8-main """
 from models.rectangle import Rectangle
@@ -371,13 +382,13 @@ if __name__ == "__main__":
     r1.update(x=1, height=2, y=3, width=4)
     print(r1)
 
-guillaume@ubuntu:~/$ ./8-main.py
+user@ubuntu:~/$ ./8-main.py
 [Rectangle] (1) 10/10 - 10/10
 [Rectangle] (1) 10/10 - 10/1
 [Rectangle] (1) 2/10 - 1/1
 [Rectangle] (89) 3/1 - 2/1
 [Rectangle] (89) 1/3 - 4/2
-guillaume@ubuntu:~/$
+user@ubuntu:~/$
 ```
 
 **Files:** [`rectangle.py`](./models/rectangle.py), [`8-main.py`](./8-main.py)
@@ -387,7 +398,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 9-main.py
+user@ubuntu:~/$ cat 9-main.py
 #!/usr/bin/python3
 """ 9-main """
 from models.square import Square
@@ -413,7 +424,7 @@ if __name__ == "__main__":
     print(s3.area())
     s3.display()
 
-guillaume@ubuntu:~/$ ./9-main.py
+user@ubuntu:~/$ ./9-main.py
 [Square] (1) 0/0 - 5
 25
 #####
@@ -435,7 +446,7 @@ guillaume@ubuntu:~/$ ./9-main.py
  ###
  ###
  ###
-guillaume@ubuntu:~/$ 
+user@ubuntu:~/$ 
 ```
 
 **Files:** [`square.py`](./models/square.py), [`9-main.py`](./9-main.py)
@@ -445,7 +456,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 10-main.py
+user@ubuntu:~/$ cat 10-main.py
 #!/usr/bin/python3
 """ 10-main """
 from models.square import Square
@@ -463,12 +474,12 @@ if __name__ == "__main__":
     except Exception as e:
         print("[{}] {}".format(e.__class__.__name__, e))
 
-guillaume@ubuntu:~/$ ./10-main.py
+user@ubuntu:~/$ ./10-main.py
 [Square] (1) 0/0 - 5
 5
 [Square] (1) 0/0 - 10
 [TypeError] width must be an integer
-guillaume@ubuntu:~/$ 
+user@ubuntu:~/$ 
 ```
 
 **Files:** [`square.py`](./models/square.py), [`10-main.py`](./10-main.py)
@@ -478,7 +489,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 11-main.py
+user@ubuntu:~/$ cat 11-main.py
 #!/usr/bin/python3
 """ 11-main """
 from models.square import Square
@@ -509,7 +520,7 @@ if __name__ == "__main__":
     s1.update(size=7, id=89, y=1)
     print(s1)
 
-guillaume@ubuntu:~/$ ./11-main.py
+user@ubuntu:~/$ ./11-main.py
 [Square] (1) 0/0 - 5
 [Square] (10) 0/0 - 5
 [Square] (1) 0/0 - 2
@@ -518,7 +529,7 @@ guillaume@ubuntu:~/$ ./11-main.py
 [Square] (1) 12/4 - 2
 [Square] (1) 12/1 - 7
 [Square] (89) 12/1 - 7
-guillaume@ubuntu:~/$
+user@ubuntu:~/$
 ```
 
 **Files:** [`square.py`](./models/square.py), [`11-main.py`](./11-main.py)
@@ -528,7 +539,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 12-main.py
+user@ubuntu:~/$ cat 12-main.py
 #!/usr/bin/python3
 """ 12-main """
 from models.rectangle import Rectangle
@@ -547,14 +558,14 @@ if __name__ == "__main__":
     print(r2)
     print(r1 == r2)
 
-guillaume@ubuntu:~/$ ./12-main.py
+user@ubuntu:~/$ ./12-main.py
 [Rectangle] (1) 1/9 - 10/2
 {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
 <class 'dict'>
 [Rectangle] (2) 0/0 - 1/1
 [Rectangle] (1) 1/9 - 10/2
 False
-guillaume@ubuntu:~/$ 
+user@ubuntu:~/$ 
 ```
 
 **Files:** [`rectange.py`](./models/rectangle.py), [`12-main.py`](./12-main.py)
@@ -564,7 +575,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 13-main.py
+user@ubuntu:~/$ cat 13-main.py
 #!/usr/bin/python3
 """ 13-main """
 from models.square import Square
@@ -583,14 +594,14 @@ if __name__ == "__main__":
     print(s2)
     print(s1 == s2)
 
-guillaume@ubuntu:~/$ ./13-main.py
+user@ubuntu:~/$ ./13-main.py
 [Square] (1) 2/1 - 10
 {'id': 1, 'x': 2, 'size': 10, 'y': 1}
 <class 'dict'>
 [Square] (2) 1/0 - 1
 [Square] (1) 2/1 - 10
 False
-guillaume@ubuntu:~/$
+user@ubuntu:~/$
 ```
 
 **Files:** [`square.py`](./models/square.py), [`13-main.py`](./13-main.py)
@@ -600,7 +611,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 14-main.py
+user@ubuntu:~/$ cat 14-main.py
 #!/usr/bin/python3
 """ 14-main """
 from models.base import Base
@@ -616,12 +627,12 @@ if __name__ == "__main__":
     print(json_dictionary)
     print(type(json_dictionary))
 
-guillaume@ubuntu:~/$ ./14-main.py
+user@ubuntu:~/$ ./14-main.py
 {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}
 <class 'dict'>
 [{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]
 <class 'str'>
-guillaume@ubuntu:~/$ 
+user@ubuntu:~/$ 
 ```
 
 **Files:** [`base.py`](./models/base.py), [`14-main.py`](./14-main.py)
@@ -631,7 +642,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 15-main.py
+user@ubuntu:~/$ cat 15-main.py
 #!/usr/bin/python3
 """ 15-main """
 from models.rectangle import Rectangle
@@ -645,9 +656,9 @@ if __name__ == "__main__":
     with open("Rectangle.json", "r") as file:
         print(file.read())
 
-guillaume@ubuntu:~/$ ./15-main.py
+user@ubuntu:~/$ ./15-main.py
 [{"y": 8, "x": 2, "id": 1, "width": 10, "height": 7}, {"y": 0, "x": 0, "id": 2, "width": 2, "height": 4}]
-guillaume@ubuntu:~/$
+user@ubuntu:~/$
 ```
 
 **Files:** [`base.py`](./models/base.py), [`15-main.py`](./15-main.py)
@@ -657,7 +668,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 16-main.py
+user@ubuntu:~/$ cat 16-main.py
 #!/usr/bin/python3
 """ 16-main """
 from models.rectangle import Rectangle
@@ -674,11 +685,11 @@ if __name__ == "__main__":
     print("[{}] {}".format(type(json_list_input), json_list_input))
     print("[{}] {}".format(type(list_output), list_output))
 
-guillaume@ubuntu:~/$ ./16-main.py
+user@ubuntu:~/$ ./16-main.py
 [<class 'list'>] [{'height': 4, 'width': 10, 'id': 89}, {'height': 7, 'width': 1, 'id': 7}]
 [<class 'str'>] [{"height": 4, "width": 10, "id": 89}, {"height": 7, "width": 1, "id": 7}]
 [<class 'list'>] [{'height': 4, 'width': 10, 'id': 89}, {'height': 7, 'width': 1, 'id': 7}]
-guillaume@ubuntu:~/$
+user@ubuntu:~/$
 ```
 
 **Files:** [`base.py`](./models/base.py), [`16-main.py`](./16-main.py)
@@ -688,7 +699,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 17-main.py
+user@ubuntu:~/$ cat 17-main.py
 #!/usr/bin/python3
 """ 17-main """
 from models.rectangle import Rectangle
@@ -703,12 +714,12 @@ if __name__ == "__main__":
     print(r1 is r2)
     print(r1 == r2)
 
-guillaume@ubuntu:~/$ ./17-main.py
+user@ubuntu:~/$ ./17-main.py
 [Rectangle] (1) 1/0 - 3/5
 [Rectangle] (1) 1/0 - 3/5
 False
 False
-guillaume@ubuntu:~/$
+user@ubuntu:~/$
 ```
 
 **Files:** [`base.py`](./models/base.py), [`17-main.py`](./17-main.py)
@@ -718,7 +729,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 18-main.py
+user@ubuntu:~/$ cat 18-main.py
 #!/usr/bin/python3
 """ 18-main """
 from models.rectangle import Rectangle
@@ -761,7 +772,7 @@ if __name__ == "__main__":
     for square in list_squares_output:
         print("[{}] {}".format(id(square), square))
 
-guillaume@ubuntu:~/$ ./18-main.py
+user@ubuntu:~/$ ./18-main.py
 [139785912033120] [Rectangle] (1) 2/8 - 10/7
 [139785912033176] [Rectangle] (2) 0/0 - 2/4
 ---
@@ -774,7 +785,7 @@ guillaume@ubuntu:~/$ ./18-main.py
 ---
 [139785911764976] [Square] (5) 0/0 - 5
 [139785911765032] [Square] (6) 9/1 - 7
-guillaume@ubuntu:~/$ 
+user@ubuntu:~/$ 
 ```
 
 **Files:** [`base.py`](./models/base.py), [`18-main.py`](./18-main.py)
@@ -786,7 +797,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 100-main.py
+user@ubuntu:~/$ cat 100-main.py
 #!/usr/bin/python3
 """ 100-main """
 from models.rectangle import Rectangle
@@ -829,7 +840,7 @@ if __name__ == "__main__":
     for square in list_squares_output:
         print("[{}] {}".format(id(square), square))
 
-guillaume@ubuntu:~/$ ./100-main.py
+user@ubuntu:~/$ ./100-main.py
 [140268695797600] [Rectangle] (1) 2/8 - 10/7
 [140268695797656] [Rectangle] (2) 0/0 - 2/4
 ---
@@ -842,7 +853,7 @@ guillaume@ubuntu:~/$ ./100-main.py
 ---
 [140268695529232] [Square] (5) 0/0 - 5
 [140268695529176] [Square] (6) 9/1 - 7
-guillaume@ubuntu:~/$
+user@ubuntu:~/$
 ```
 
 **Files:** [`models/`](./models/), [`100-main.py`](./100-main.py)
@@ -852,7 +863,7 @@ guillaume@ubuntu:~/$
 
 
 ```
-guillaume@ubuntu:~/$ cat 101-main.py
+user@ubuntu:~/$ cat 101-main.py
 #!/usr/bin/python3
 """ 101-main """
 from models.base import Base
@@ -866,7 +877,7 @@ if __name__ == "__main__":
 
     Base.draw(list_rectangles, list_squares)
 
-guillaume@ubuntu:~/$ ./101-main.py
+user@ubuntu:~/$ ./101-main.py
 ....
 ```
 
