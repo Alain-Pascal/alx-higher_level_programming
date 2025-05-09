@@ -6,6 +6,7 @@ Defines a base class for all other classes in the project.
 import json
 import os
 import csv
+import turtle
 
 
 class Base:
@@ -173,3 +174,42 @@ class Base:
                     })
 
             return [cls.create(**d) for d in list_dicts]
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        Open a window and draw all the Rectangles and Squares
+        """
+        screen = turtle.Screen()
+        screen.title("Rectangles and Squares")
+        t = turtle.Turtle()
+        t.speed(1)
+
+        # Draw rectangles
+        t.color("blue")
+        for rect in list_rectangles:
+            t.penup()
+            t.goto(rect.x, -rect.y)  # Adjust for turtle's coordinate system
+            t.pendown()
+            t.begin_fill()
+            for _ in range(2):
+                t.forward(rect.width)
+                t.left(90)
+                t.forward(rect.height)
+                t.left(90)
+            t.end_fill()
+
+        # Draw squares
+        t.color("green")
+        for sqr in list_squares:
+            t.penup()
+            t.goto(sqr.x, -sqr.y)
+            t.pendown()
+            t.begin_fill()
+            for _ in range(4):
+                t.forward(sqr.size)
+                t.left(90)
+            t.end_fill()
+
+        t.hideturtle()
+        screen.mainloop()
