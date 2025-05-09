@@ -512,7 +512,9 @@ user@ubuntu:~/$
 
 ### 11. Square size
 
-
+Update the class `Square` by adding the public getter and setter `size`
+* The setter should assign (in this order) the `width` and the `height` - with the same value
+* The setter should have the same value validation as the `Rectangle` for `width` and `height` - No need to change the exception error message (It should be the one from `width`)
 
 ```
 user@ubuntu:~/$ cat 10-main.py
