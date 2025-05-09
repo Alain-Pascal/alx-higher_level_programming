@@ -5,6 +5,7 @@ Defines a base class for all other classes in the project.
 
 import json
 import os
+import csv
 
 
 class Base:
@@ -112,4 +113,63 @@ class Base:
         with open(filename, 'r') as file:
             json_string = file.read()
             list_dicts = cls.from_json_string(json_string)
+            return [cls.create(**d) for d in list_dicts]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Write the CSV str representation of list_objs to a file
+        """
+        filename = "{}.csv".format(cls.__name__)
+
+        with open(filename, 'w', newline="") as csvfile:
+            if list_objs is None or len(list_objs) == 0:
+                csvfile.write("")
+            else:
+                writer = csv.writer(csvfile)
+
+                if cls.__name__ == "Rectangle":
+                    for obj in list_objs:
+                        writer.writerow([
+                            obj.id, obj.width, obj.height, obj.x, obj.y
+                            ]
+                        )
+                elif cls.__name__ == "Square":
+                    for obj in list_objs:
+                        writer.writerow([
+                            obj.id, obj.size, obj.x, obj.y
+                            ]
+                        )
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Return a list of instances from a CSV file
+        """
+        filename = "{}.csv".format(cls.__name__)
+
+        if not os.path.exists(filename):
+            return []
+
+        with open(filename, 'r') as csvfile:
+            reader = csv.reader(csvfile)
+            list_dicts = []
+            if cls.__name__ == "Rectangle":
+                for row in reader:
+                    list_dicts.append({
+                        'id': int(row[0]),
+                        'width': int(row[1]),
+                        'height': int(row[2]),
+                        'x': int(row[3]),
+                        'y': int(row[4])
+                    })
+            elif cls.__name__ == 'Square':
+                for row in reader:
+                    list_dicts.append({
+                        'id': int(row[0]),
+                        'size': int(row[1]),
+                        'x': int(row[2]),
+                        'y': int(row[3])
+                    })
+
             return [cls.create(**d) for d in list_dicts]
