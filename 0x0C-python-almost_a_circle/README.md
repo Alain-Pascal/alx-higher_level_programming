@@ -401,7 +401,13 @@ user@ubuntu:~/$
 
 ### 9. Update #1
 
+Update the class `Rectangle` by updating the public method `def update(self, *args):` by changing the prototype to `update(self, *args, **kwargs)` that assigns a key/value argument to attributes:
+* `**kwargs` can be thought of as a double pointer to a dictionary: key/value
+    * As Python doesn’t have pointers, `**kwargs` is not literally a double pointer – describing it as such is just a way of explaining its behavior in terms you’re already familiar with
+* `**kwargs` must be skipped if `*args` exists and is not empty
+* Each key in this dictionary represents an attribute to the instance
 
+This type of argument is called a “key-worded argument”. Argument order is not important.
 
 ```
 user@ubuntu:~/$ cat 8-main.py
