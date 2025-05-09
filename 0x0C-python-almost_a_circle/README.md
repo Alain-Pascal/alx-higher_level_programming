@@ -352,7 +352,14 @@ user@ubuntu:~/$
 
 ### 8. Update #0
 
+Update the class `Rectangle` by adding the public method `def update(self, *args):` that assigns an argument to each attribute:
+* 1st argument should be the `id` attribute
+* 2nd argument should be the `width` attribute
+* 3rd argument should be the `height` attribute
+* 4th argument should be the `x` attribute
+* 5th argument should be the `y` attribute
 
+This type of argument is called a “no-keyword argument” - Argument order is super important.
 
 ```
 user@ubuntu:~/$ cat 7-main.py
