@@ -605,7 +605,14 @@ user@ubuntu:~/$
 
 ### 13. Rectangle instance to dictionary representation
 
+Update the class `Rectangle` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Rectangle`:
 
+This dictionary must contain:
+* `id`
+* `width`
+* `height`
+* `x`
+* `y`
 
 ```
 user@ubuntu:~/$ cat 12-main.py
