@@ -318,7 +318,7 @@ user@ubuntu:~/$
 
 ### 7. Display #1
 
-
+Update the class `Rectangle` by improving the public method `def display(self):` to print in stdout the `Rectangle` instance with the character `#` by taking care of `x` and `y`
 
 ```
 user@ubuntu:~/$ cat 6-main.py
