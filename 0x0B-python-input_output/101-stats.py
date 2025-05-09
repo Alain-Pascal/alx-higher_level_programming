@@ -24,8 +24,8 @@ def main():
             if len(line_parts) >= 2:  # minimum length of a valid line
                 try:
                     # attempt to parse status code and file size
-                    status_code = int(line_parts[-2])
                     file_size = int(line_parts[-1])
+                    status_code = int(line_parts[-2])
 
                     # update metrics
                     total_file_size += file_size
