@@ -7,6 +7,7 @@ import sys
 import os
 import json
 
+
 class TestRectangle(unittest.TestCase):
     def setUp(self):
         """Reset the __nb_objects counter before each test."""
@@ -160,6 +161,9 @@ class TestRectangle(unittest.TestCase):
     def test_save_to_file_none(self):
         """Test save_to_file with None."""
         Rectangle.save_to_file(None)
+        # Check if the file exists
+        self.assertTrue(os.path.exists("Rectangle.json"))
+        # Verify the file content
         with open("Rectangle.json", "r") as file:
             self.assertEqual(file.read(), "[]")
 
